@@ -4,7 +4,7 @@
 
             
               <center class="mb-3">
-                      <div class="btn-group">
+                    <div class="btn-group">
                         <button type="button" class="btn btn-info">Editor</button>
                         <button type="button" class="btn btn-info">Publish / share</button>
                       </div>
