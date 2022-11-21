@@ -1,3 +1,6 @@
+<?= $this->extend("template") ?>
+
+<?= $this->section("content") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -219,28 +222,30 @@
         </ul>
     </div>
 
-    <center>
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
+
+    <div class="login-logo">
             <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="ShuyoSuvey Logo" style="width : 150px;height : 150px;"> 
     </div>
+    
+    <center>
+        <div class="heroe">
+            
+            <h1>Welcome to ShuyoSurvey</h1>
 
-    <div class="heroe">
-        
-        <h1>Welcome to ShuyoSurvey</h1>
-
-        <h2>Create simple to sophisticated surveys online and enjoy various features for creating surveys</h2>
-        
-    </div>
+            <h2>Create simple to sophisticated surveys online and enjoy various features for creating surveys</h2>
+            
+        </div>
     </center>
+
 </header>
 
 <!-- CONTENT -->
 
 <section>
-                      <div class="btn-group">
-                        <button type="button" class="btn btn-info">Edit</button>
-                      </div>
+        <a class="btn btn-app" style="background-color:aquamarine; width : 120px;height : 100px;">
+        
+        <i class="fas fa-edit"></i> Create
+        </a>
 </section>
 
 <div class="further">
@@ -320,3 +325,4 @@
 
 </body>
 </html>
+<?= $this->endSection() ?>
