@@ -1,6 +1,12 @@
 <?= $this->extend("template") ?>
 
 <?= $this->section("content") ?>
+  <!DOCTYPE html>
+  <html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1", shrink-to-fit=no>
+  <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+  <title>ShuyoSurvey | Create Question</title>
 
             
               <center class="mb-3">

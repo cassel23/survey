@@ -5,7 +5,7 @@
     <title>Welcome to ShuyoSurvey!</title>
     <meta name="description" content="The small framework with powerful features">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
 
     <!-- STYLES -->
 
@@ -203,12 +203,11 @@
             <li class="menu-toggle">
                 <button onclick="toggleMenu();">&#9776;</button>
             </li>
-            <li class="menu-item hidden"><a href="#">Home</a></li>
-            <li class="menu-item hidden"><a href="https://codeigniter4.github.io/userguide/" target="_blank">Docs</a>
+            <li class="menu-item hidden"><a href="https://codeigniter4.github.io/userguide/" target="_blank">Dashboard</a>
             </li>
-            <li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">Community</a></li>
+            <li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">My Surveys</a></li>
             <li class="menu-item hidden"><a
-                    href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Contribute</a>
+                    href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Result Survey</a>
             </li>
         </ul>
     </div>
