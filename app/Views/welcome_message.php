@@ -197,6 +197,13 @@
 
 <!-- HEADER: MENU + HEROE SECTION -->
 <header>
+          <!-- Font Awesome Icon Library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <style>
+              .checked {
+                color: pink;
+              }
+          </style>
 
     <div class="menu">
         <ul>
@@ -213,10 +220,11 @@
     </div>
 
     <center>
-    <div class="login-logo">
-            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="Home Logo" style="width : 150px;heigh : 150px;"> 
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="ShuyoSuvey Logo" style="width : 150px;height : 150px;"> 
     </div>
-    
+
     <div class="heroe">
         
         <h1>Welcome to ShuyoSurvey</h1>
@@ -230,13 +238,9 @@
 <!-- CONTENT -->
 
 <section>
-    <td>
-     <!-- Application buttons -->
-     <a class="btn btn-app bg-info">
-        <span class="badge bg-danger">531</span>
-        <i class="fas fa-heart"></i> Likes
-    </a>
-    </td>
+                      <div class="btn-group">
+                        <button type="button" class="btn btn-info">Edit</button>
+                      </div>
 </section>
 
 <div class="further">
