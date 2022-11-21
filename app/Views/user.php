@@ -82,7 +82,7 @@
       <div class="social-auth-links text-center mb-3">
       <p class="mb-0" style="text-align:center;">
       <a> Don't Have an Account?</a>
-        <a href="register.html" class="text-center">Sign Up</a>
+        <a href="http://localhost:8080/user/signin" class="text-center">Sign Up</a>
       </p>
     </div>
     <!-- /.login-card-body -->

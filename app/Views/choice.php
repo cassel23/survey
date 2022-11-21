@@ -17,7 +17,6 @@
               }
           </style>
 </head>
-
             
               <center class="mb-3">
                     <div class="btn-group">
@@ -272,8 +271,25 @@
                           </div>
                     </div>
                           <div class="tab-pane fade" id="custom-tabs-one-surveysetting" role="tabpanel" aria-labelledby="custom-tabs-one-surveysetting-tab">
-                              Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
+                              <h4>Additional Setting</h4>
+
+                              <div class="card-body">
+                                  <div class="form-group">
+                                      <label for="inputName">Survey Title</label>
+                                      <input type="text" id="inputName" class="form-control">
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="inputDescription">Survey Description</label>
+                                      <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-mr-4">
+                                      <a href="#" class="btn btn-secondary">Cancel</a>
+                                      <input type="submit" value="Save" class="btn btn-success float-right">
+                                      </div>
+                                    </div>
                           </div>
+                    </div>
                 </div>
               </div>      
                           
