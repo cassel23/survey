@@ -220,7 +220,7 @@
 
     <center>
     <div class="login-logo">
-            <img src="/assets/dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="Home Logo" style="width : 150px;heigh : 150px;"> 
+            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="Home Logo" style="width : 150px;heigh : 150px;"> 
     </div>
     
     <div class="heroe">

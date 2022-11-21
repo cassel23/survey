@@ -15,14 +15,14 @@
   <!-- icheck bootstrap -->
   <link rel="stylesheet" href="../../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="../../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="../../_dist/css/adminlte.min.css">
 </head>
 <body class="hold-transition register-page">
     <center>
 <div class="login-box">
     <div class="login-logo">
         <a href="index3.html" class="brand-link">
-            <img src="/assets/dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="User Logo" style="width : 150px;heigh : 150px;"> 
+            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="User Logo" style="width : 150px;heigh : 150px;"> 
             <a href="../../index2.html"><b>Shuyo</b>Survey</a>
         </a>
     </div>
@@ -102,7 +102,7 @@
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
+<script src="../../_dist/js/adminlte.min.js"></script>
 
 </body>
 </html>
