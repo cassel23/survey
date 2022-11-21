@@ -77,13 +77,59 @@
                                      </div>
                                     </div>
 
-                                    
+                                   <div class="tab-pane fade" id="vert-tabs-multiple" role="tabpanel" aria-labelledby="vert-tabs-multiple-tab">
 
-                              
+                                            <div class="card-body">
+                                              <div class="form-group">
+                                                <label for="inputName">Question</label>
+                                                <input type="text" id="inputName" class="form-control">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="inputDescription">Answer</label>
+                                                <input type="text" id="inputName" class="form-control">
+                                                <input type="text" id="inputName" class="form-control mt-2">
+                                              </div>
+                                                  <div class="ml-4 mr-4">
+                                                <a href="#" class="btn btn-block btn-danger">
+                                                  <i class="fa fa-plus mr-2"></i> 
+                                                  Add More
+                                                </a>
+                                                </div>
+                                            </div>
+                                            <div class="ml-2">
+                                                <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                    <label for="remember" style="font-size: 90%;">
+                                                      Wajib di isi
+                                                    </label>
+                                                  </div>
+                                          </div>
+                                    </div>
 
-                                      <div class="tab-pane fade" id="vert-tabs-multiple" role="tabpanel" aria-labelledby="vert-tabs-multiple-tab">
-                                        Mauris tincidunt mi at erat gravida, eget tristique urna bibendum. Mauris pharetra purus ut ligula tempor, et vulputate metus facilisis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Maecenas sollicitudin, nisi a luctus interdum, nisl ligula placerat mi, quis posuere purus ligula eu lectus. Donec nunc tellus, elementum sit amet ultricies at, posuere nec nunc. Nunc euismod pellentesque diam.
-                                      </div>
+                                    <div class="tab-pane fade" id="vert-tabs-range" role="tabpanel" aria-labelledby="vert-tabs-range-tab">
+
+                                        <div class="card-body">
+                                          <div class="form-group">
+                                            <label for="inputName">Question</label>
+                                            <input type="text" id="inputName" class="form-control">
+                                          </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                          <label for="customRange1">Custom range</label>
+                                          <input type="range" class="custom-range" id="customRange1">
+                                        </div>
+
+                                        <div class="ml-2">
+                                            <div class="icheck-primary">
+                                                <input type="checkbox" id="remember">
+                                                <label for="remember" style="font-size: 90%;">
+                                                  Wajib di isi
+                                                </label>
+                                              </div>
+                                        </div>
+                                        </div>
+
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                         <div class="info-box bg-gradient-warning">
                                           <span class="info-box-icon"><i class="fa fa-mouse-pointer"></i></span>
