@@ -192,17 +192,23 @@
                                             </div>
 
                                             <div class="tab-pane fade" id="vert-tabs-image" role="tabpanel" aria-labelledby="vert-tabs-image-tab">
-                                               <div class="form-group">
-                                                  <label for="exampleInputFile">File input</label>
+                                              <div class="card-body">
+                                                <div class="form-group">
+                                                  <label for="inputName">Question</label>
+                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                                </div>
+                                            
+                                                <div class="form-group">
+                                                  <label for="exampleInputFile">Image input</label>
                                                     <div class="input-group">
                                                       <div class="custom-file">
                                                         <input type="file" class="custom-file-input" id="exampleInputFile">
-                                                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                          <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
                                                       </div>
                                                     </div>
                                                 </div>
 
-                                            
+                                              </div>
                                           </div>
                                         
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
