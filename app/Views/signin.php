@@ -29,11 +29,14 @@
 
   <div class="card">
     <div class="card-body register-card-body">
+      <?php if(!empty(session()->getFlashData("success"))) : ?>
+        <div class="alert alert-success"><?= session()->getFlashData("success"); ?></div>
+      <?php endif; ?>
       <p class="login-box-msg">Register a new account</p>
       
-      <form action="../../index.html" method="post">
+      <form action="/user/signin" method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Full name">
+          <input type="text" class="form-control" placeholder="Full name" name="name">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -41,7 +44,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="email" class="form-control" placeholder="Email">
+          <input type="email" class="form-control" placeholder="Email" name="email">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -49,7 +52,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" class="form-control" placeholder="Password" name="password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -57,7 +60,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Retype password">
+          <input type="password" class="form-control" placeholder="Retype password" name="repeat_password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -77,7 +80,7 @@
         <p>- OR -</p>
         <div class="ml-4 mr-4">
         <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> 
+          <i class="fab fa-google mr-2"></i> 
           Sign in using Google
         </a>
         </div>

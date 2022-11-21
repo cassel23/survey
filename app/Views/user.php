@@ -74,7 +74,7 @@
         <p>- OR -</p>
         <div class="mr-4 ml-4">
         <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google
+          <i class="fab fa-google mr-2"></i> Sign in using Google
         </a>
       </div>
       <!-- /.social-auth-links -->
