@@ -89,7 +89,7 @@
         <div class="social-auth-links text-center mb-3">
             <p class="mb-0" style="text-align:center;">
                 <a> Already Have an Account?</a>
-                <a href="login.html" class="text-center">Log In</a>
+                <a href="http://localhost:8080/user" class="text-center">Log In</a>
             </p>
         </div>
     </div>
