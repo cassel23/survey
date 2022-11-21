@@ -1,3 +1,6 @@
+<?= $this->extend("template") ?>
+
+<?= $this->section("content") ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -197,6 +200,13 @@
 
 <!-- HEADER: MENU + HEROE SECTION -->
 <header>
+          <!-- Font Awesome Icon Library -->
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <style>
+              .checked {
+                color: pink;
+              }
+          </style>
 
     <div class="menu">
         <ul>
@@ -212,31 +222,30 @@
         </ul>
     </div>
 
-    <center>
+
     <div class="login-logo">
-            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="Home Logo" style="width : 150px;heigh : 150px;"> 
+            <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="ShuyoSuvey Logo" style="width : 150px;height : 150px;"> 
     </div>
     
-    <div class="heroe">
-        
-        <h1>Welcome to ShuyoSurvey</h1>
+    <center>
+        <div class="heroe">
+            
+            <h1>Welcome to ShuyoSurvey</h1>
 
-        <h2>Create simple to sophisticated surveys online and enjoy various features for creating surveys</h2>
-        
-    </div>
+            <h2>Create simple to sophisticated surveys online and enjoy various features for creating surveys</h2>
+            
+        </div>
     </center>
+
 </header>
 
 <!-- CONTENT -->
 
 <section>
-    <td>
-     <!-- Application buttons -->
-     <a class="btn btn-app bg-info">
-        <span class="badge bg-danger">531</span>
-        <i class="fas fa-heart"></i> Likes
-    </a>
-    </td>
+        <a class="btn btn-app" style="background-color:aquamarine; width : 120px;height : 100px;">
+        
+        <i class="fas fa-edit"></i> Create
+        </a>
 </section>
 
 <div class="further">
@@ -316,3 +325,4 @@
 
 </body>
 </html>
+<?= $this->endSection() ?>
