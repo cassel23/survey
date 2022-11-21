@@ -1,6 +1,15 @@
 <?= $this->extend("template") ?>
 
 <?= $this->section("content") ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+  <title>ShuyoSurvey | Survey</title>
+
     <section class="content">
       <div class="row justify-content-center">
         <div class="col-md-6">
@@ -8,7 +17,7 @@
             <div class="card-header">
               <h3 class="card-title">Title and Description Survey</h3>
             </div>
-
+</head>
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">Survey Name</label>
@@ -32,7 +41,7 @@
       <div class="row justify-content-center">
         <div class="col-6">
           <a href="#" class="btn btn-secondary">Cancel</a>
-          <input type="submit" value="Create new Project" class="btn btn-success float-right">
+          <input type="submit" value="Create New Project"  class="btn btn-success float-right">
         </div>
       </div>
 
