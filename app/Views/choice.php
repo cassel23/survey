@@ -200,8 +200,54 @@
                                                     </div>
                                                 </div>
 
+                                                <div class="ml-2">
+                                                  <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                      <label for="remember" style="font-size: 90%;">
+                                                        Wajib di isi
+                                                      </label>
+                                                 </div>
+                                               </div>
                                               </div>
+                                            </div>
+
+                                            <div class="tab-pane fade" id="vert-tabs-date" role="tabpanel" aria-labelledby="vert-tabs-date-tab">
+                                              <div class="card-body">
+                                                <div class="form-group">
+                                                  <label for="inputName">Question</label>
+                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                                </div>
+
+                                                <div class="ml-2">
+                                                  <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                      <label for="remember" style="font-size: 90%;">
+                                                        Wajib di isi
+                                                      </label>
+                                                 </div>
+                                               </div>
+                                              </div>
+                                            </div>
+
+                                        <div class="tab-pane fade" id="vert-tabs-emoticon" role="tabpanel" aria-labelledby="vert-tabs-emoticon-tab">
+                                          <div class="card-body">
+                                            <div class="form-group">
+                                              <label for="inputName">Question</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                            </div>
+
+                                            
                                           </div>
+                                          <div class="ml-2">
+                                              <div class="icheck-primary">
+                                                  <input type="checkbox" id="remember">
+                                                  <label for="remember" style="font-size: 90%;">
+                                                    Wajib di isi
+                                                  </label>
+                                                </div>
+                                          </div>
+                                        </div>
+
                                         
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                         <div class="info-box bg-gradient-warning">
