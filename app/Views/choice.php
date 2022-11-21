@@ -1,7 +1,15 @@
 <?= $this->extend("template") ?>
 
 <?= $this->section("content") ?>
-
+<head>
+      <!-- Font Awesome Icon Library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+          <style>
+              .checked {
+                color: pink;
+              }
+          </style>
+</head>
             
               <center class="mb-3">
                     <div class="btn-group">
@@ -53,12 +61,12 @@
                                       <div class="card-body">
                                         <div class="form-group">
                                           <label for="inputName">Question</label>
-                                          <input type="text" id="inputName" class="form-control">
+                                          <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                         </div>
                                         <div class="form-group">
                                           <label for="inputDescription">Answer</label>
-                                          <input type="text" id="inputName" class="form-control">
-                                          <input type="text" id="inputName" class="form-control mt-2">
+                                          <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your answer">
                                         </div>
                                             <div class="ml-4 mr-4">
                                           <a href="#" class="btn btn-block btn-danger">
@@ -82,12 +90,12 @@
                                             <div class="card-body">
                                               <div class="form-group">
                                                 <label for="inputName">Question</label>
-                                                <input type="text" id="inputName" class="form-control">
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                               </div>
                                               <div class="form-group">
                                                 <label for="inputDescription">Answer</label>
-                                                <input type="text" id="inputName" class="form-control">
-                                                <input type="text" id="inputName" class="form-control mt-2">
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your answer">
                                               </div>
                                                   <div class="ml-4 mr-4">
                                                 <a href="#" class="btn btn-block btn-danger">
@@ -111,14 +119,18 @@
                                         <div class="card-body">
                                           <div class="form-group">
                                             <label for="inputName">Question</label>
-                                            <input type="text" id="inputName" class="form-control">
+                                            <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                           </div>
                                         </div>
 
                                         <div class="form-group">
-                                          <label for="customRange1">Custom range</label>
-                                          <input type="range" class="custom-range" id="customRange1">
-                                        </div>
+                                            <label for="inputName">Rating</label>
+                                                <span class="fa fa-star custom"></span>
+                                                <span class="fa fa-star custom"></span>
+                                                <span class="fa fa-star custom"></span>
+                                                <span class="fa fa-star custom"></span>
+                                                <span class="fa fa-star custom"></span>
+                                          </div>
 
                                         <div class="ml-2">
                                             <div class="icheck-primary">
@@ -130,6 +142,61 @@
                                         </div>
                                         </div>
 
+                                        <div class="tab-pane fade" id="vert-tabs-text" role="tabpanel" aria-labelledby="vert-tabs-text-tab">
+                                          <div class="card-body">
+                                            <div class="form-group">
+                                              <label for="inputName">Question</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                            </div>
+                                            <div class="form-group">
+                                              <label for="inputDescription">Answer</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
+                                            </div>
+                                          </div>
+                                          <div class="ml-2">
+                                              <div class="icheck-primary">
+                                                  <input type="checkbox" id="remember">
+                                                  <label for="remember" style="font-size: 90%;">
+                                                    Wajib di isi
+                                                  </label>
+                                                </div>
+                                          </div>
+                                          </div>
+
+                                          <div class="tab-pane fade" id="vert-tabs-email" role="tabpanel" aria-labelledby="vert-tabs-email-tab">
+                                            <div class="card-body">
+                                              <div class="form-group row">
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                                                <div class="col-sm-10">
+                                                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                </div>
+                                              </div>
+    
+                                                <div class="ml-2">
+                                                  <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                      <label for="remember" style="font-size: 90%;">
+                                                        Wajib di isi
+                                                      </label>
+                                                 </div>
+                                               </div>
+                                             </div>   
+                                            </div>
+
+                                            <div class="tab-pane fade" id="vert-tabs-image" role="tabpanel" aria-labelledby="vert-tabs-image-tab">
+                                               <div class="form-group">
+                                                  <label for="exampleInputFile">File input</label>
+                                                    <div class="input-group">
+                                                      <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                          <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                                      </div>
+                                                    </div>
+                                                </div>
+
+                                            
+                                          </div>
+                                        
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                         <div class="info-box bg-gradient-warning">
                                           <span class="info-box-icon"><i class="fa fa-mouse-pointer"></i></span>
