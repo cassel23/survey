@@ -22,7 +22,7 @@
     <center>
 <div class="login-box">
     <div class="login-logo">
-        <a href="index3.html" class="brand-link">
+        <a class="brand-link">
             <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="User Logo" style="width : 150px;height : 150px;"> 
             <a href="../../index2.html"><b>Shuyo</b>Survey</a>
         </a>
