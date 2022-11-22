@@ -208,20 +208,6 @@
               }
           </style>
 
-    <div class="menu">
-        <ul>
-            <li class="menu-toggle">
-                <button onclick="toggleMenu();">&#9776;</button>
-            </li>
-            <li class="fa fa-dashboard"><a href="https://codeigniter4.github.io/userguide/" target="_blank"></i>Dashboard</a>
-            </li>
-            <li class="fa fa-newspaper-o"><a href="https://forum.codeigniter.com/" target="_blank">My Surveys</a></li>
-            <li class="fa fa-bar-chart-o"><a
-                    href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Result Survey</a>
-            </li>
-        </ul>
-    </div>
-
 
     <div class="login-logo">
             <img src="/assets/_dist/img/ShuyoSuvey_logo.png" class="img-circle elevation-2" alt="ShuyoSuvey Logo" style="width : 150px;height : 150px;"> 
