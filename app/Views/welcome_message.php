@@ -247,7 +247,8 @@
     <div class="row justify-content-center">
         
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
-            <i class="fa fa-user-circle-o"></i>Complete Your Profile
+            <i class="fa fa-user-circle-o" style="margin-top: 40px;"></i>
+            <h6>Complete Your Profile</h6>
         </a>
 
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
@@ -256,7 +257,8 @@
         </a>
 
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
-            <i class="fa fa-gears"></i> Setting
+            <i class="fa fa-gears" style="margin-top: 40px;"></i> 
+            <h6>Setting</h6>
         </a>
 
         
