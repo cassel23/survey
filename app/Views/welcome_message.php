@@ -241,23 +241,23 @@
 
 <!-- CONTENT -->
 
-<section class="content">
+<section class="content mx-5">
     <div class="card">
     <div class="card-body home-card-body">
     <div class="row justify-content-center">
         
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
-            <i class="fa fa-user-circle-o" style="margin-top: 40px;"></i>
+            <p><i class="fa fa-user-circle-o fa-3x" style="margin-top: 25px;"></i></p>
             <h6>Complete Your Profile</h6>
         </a>
 
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
-            <i class="fas fa-edit" style="margin-top: 40px;"></i> 
+            <p><i class="fas fa-edit fa-3x" style="margin-top: 25px;"></i></p>
             <h6>Create Survey</h6>
         </a>
 
         <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
-            <i class="fa fa-gears" style="margin-top: 40px;"></i> 
+            <p><i class="fa fa-gears fa-3x" style="margin-top: 25px;"></i></p>
             <h6>Setting</h6>
         </a>
 
