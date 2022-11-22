@@ -213,10 +213,10 @@
             <li class="menu-toggle">
                 <button onclick="toggleMenu();">&#9776;</button>
             </li>
-            <li class="menu-item hidden"><a href="https://codeigniter4.github.io/userguide/" target="_blank">Dashboard</a>
+            <li class="fa fa-dashboard"><a href="https://codeigniter4.github.io/userguide/" target="_blank"></i>Dashboard</a>
             </li>
-            <li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">My Surveys</a></li>
-            <li class="menu-item hidden"><a
+            <li class="fa fa-newspaper-o"><a href="https://forum.codeigniter.com/" target="_blank">My Surveys</a></li>
+            <li class="fa fa-bar-chart-o"><a
                     href="https://github.com/codeigniter4/CodeIgniter4/blob/develop/CONTRIBUTING.md" target="_blank">Result Survey</a>
             </li>
         </ul>
@@ -246,24 +246,20 @@
     <div class="card-body home-card-body">
     <div class="row justify-content-center">
         
-        <a class="btn btn-app" style="background-color:aliceblue;">
-        
-            <i class="fa fa-user-circle-o"></i> Complete Your Profile
-
+        <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
+            <i class="fa fa-user-circle-o"></i>Complete Your Profile
         </a>
 
-        <a class="btn btn-app" style="background-color:aliceblue;">
-        
-            <i class="fas fa-edit"></i> Create Survey
-
+        <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
+            <i class="fas fa-edit" style="margin-top: 40px;"></i> 
+            <h6>Create Survey</h6>
         </a>
 
-        <a class="btn btn-app" style="background-color:aliceblue;">
-        
-            <i class="fa fa-wrench"></i> Setting
-
+        <a class="btn btn-app mx-5" style="background-color:powderblue; width: 200px;height: 150px;">
+            <i class="fa fa-gears"></i> Setting
         </a>
 
+        
     </div>
 </section>
 
