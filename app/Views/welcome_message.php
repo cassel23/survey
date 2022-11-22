@@ -221,15 +221,15 @@
             <h2>Create simple to sophisticated surveys online and enjoy various features for creating surveys</h2>
             
         </div>
-    </center>
+    
 
 </header>
 
 <!-- CONTENT -->
 
 <section class="content mx-5">
-    <div class="card">
-    <div class="card-body home-card-body">
+    <div class="card ">
+    <div class="card-body home-card-body justify-content-center">
     <div class="row justify-content-center">
         
          <a class="btn btn-app mx-5 mt-2" style="background-color:powderblue; width: 200px;height: 150px;">
@@ -250,7 +250,7 @@
         
     </div>
 </section>
-
+</center>
 </body>
 </html>
 <?= $this->endSection() ?>
