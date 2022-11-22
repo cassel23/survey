@@ -27,13 +27,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Dashboard</a>
+        <a href="index3.html" class="nav-link fa fa-dashboard">Dashboard</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">My Surveys</a>
+        <a href="#" class="nav-link fa fa-newspaper-o">My Surveys</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Result Surveys</a>
+        <a href="#" class="nav-link fa fa-bar-chart-o">Result Surveys</a>
       </li>
     </ul>
 
