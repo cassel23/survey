@@ -30,4 +30,8 @@ class Home extends BaseController
     {
         return view('mysurvey');
     }
+    public function resultsurvey()
+    {
+        return view('resultsurvey');
+    }
 }
