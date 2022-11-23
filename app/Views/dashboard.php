@@ -22,14 +22,15 @@
                         Sample Survey
                         </h3>
 
-                        <div class="card-tools">
-                        <button type="button" class="btn bg-info btn-sm" data-card-widget="collapse">
-                            <i class="fas fa-minus"></i>
-                        </button>
-                        <button type="button" class="btn bg-info btn-sm" data-card-widget="remove">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <div class="form-group">
+                            <div class="input-group">
+                                <button type="button" class="btn btn-default float-left" id="daterange-btn">
+                                <i class="far fa-calendar-alt"></i> Date range picker
+                                <i class="fas fa-caret-down"></i>
+                                </button>
+                            </div>
                         </div>
+
                     </div>
                     <div class="card-body">
                         <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
