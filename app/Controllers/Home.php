@@ -22,4 +22,8 @@ class Home extends BaseController
     {
         return view('choice');
     }
+    public function dashboard()
+    {
+        return view('dashboard');
+    }
 }
