@@ -39,6 +39,7 @@ $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::updateprofile');
 $routes->get('/survey', 'Home::survey');
 $routes->get('/choice', 'Home::choice');
+$routes->get('/dashboard', 'Home::dashboard');
 $routes->get('user', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
