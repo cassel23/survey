@@ -22,14 +22,14 @@
                         Sample Survey
                         </h3>
 
-                        <div class="form-group">
+                        
                             <div class="input-group">
                                 <button type="button" class="btn btn-default float-left" id="daterange-btn">
                                 <i class="far fa-calendar-alt"></i> Date range picker
                                 <i class="fas fa-caret-down"></i>
                                 </button>
                             </div>
-                        </div>
+                        
 
                     </div>
                     <div class="card-body">
