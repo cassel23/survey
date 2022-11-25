@@ -41,7 +41,6 @@ class Home extends BaseController
             'title' => $this->request->getPost("title"),
             'description' => $this->request->getPost("description"),
             'creator'=> $this->request->getPost('creator'),
-            'company' => $this->request->getPost("company"),
         ];
 
         $this->surveyModel->insert($data);

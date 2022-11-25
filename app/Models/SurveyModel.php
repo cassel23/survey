@@ -7,5 +7,5 @@ use CodeIgniter\Model;
 class SurveyModel extends Model
 {
     protected $table      = 'survey';
-    protected $allowedFields = ['title', 'description', 'creator', 'company'];
+    protected $allowedFields = ['title', 'description', 'creator'];
 }
