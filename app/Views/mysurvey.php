@@ -59,28 +59,79 @@
                                 <tbody>
                                     <tr>
                                     <td>183</td>
-                                    <td>Kim Junmyeon</td>
+                                    <td>Indonesia</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-success">Approved</span></td>
-                                    <td><a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a></td>
+                                    <td>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                     </tr>
                                     <tr>
                                     <td>219</td>
-                                    <td>Daniel Radcliffe</td>
+                                    <td>Chinese</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-warning">Pending</span></td>
+                                    <td>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                     </tr>
                                     <tr>
                                     <td>657</td>
-                                    <td>Baraa Masoud</td>
+                                    <td>Melayu</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-primary">Approved</span></td>
+                                    <td>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                     </tr>
                                     <tr>
                                     <td>175</td>
-                                    <td>Afgansyah Reza</td>
+                                    <td>Inggris</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-danger">Denied</span></td>
+                                    <td>
+                                        <div class="input-group-prepend">
+                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                            <li class="dropdown-divider"></li>
+                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                            </ul>
+                                        </div>
+                                    </td>
                                     </tr>
                                 </tbody>
                             </table>
