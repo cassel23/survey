@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 class Home extends BaseController
 {
-    private $userModel;
+    private $surveyModel;
 
     public function __construct() {
-        $this->userModel = new \App\Models\UserModel();
+        $this->surveyModel = new \App\Models\SurveyModel();
     }
     
     public function index()
@@ -33,5 +33,18 @@ class Home extends BaseController
     public function resultsurvey()
     {
         return view('resultsurvey');
+    }
+
+    public function new()
+    {
+        $data = [
+            'title' => $this->request->getPost("title"),
+            'description' => $this->request->getPost("description"),
+            'creator'=> $this->request->getPost('creator'),
+            'company' => $this->request->getPost("company"),
+        ];
+
+        $this->surveyModel->insert($data);
+        return redirect()->to("/survey")->with("success", "Data berhasil disimpan");
     }
 }
