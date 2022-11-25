@@ -40,8 +40,8 @@
       </div>
       <div class="row justify-content-center">
         <div class="col-6">
-          <a href="#" class="btn btn-secondary">Cancel</a>
-          <input type="submit" value="Create New Project"  class="btn btn-success float-right">
+          <a href="http://localhost:8080/" class="btn btn-secondary">Cancel</a>
+          <button type="submit" class="btn btn-success float-right">Create New Survey</button>
         </div>
       </div>
 
