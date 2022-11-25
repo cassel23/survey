@@ -17,6 +17,7 @@
                                         <i class="fas fa-search"></i>
                                      </button>
                                  </div>
+                                </input>
                             </div>
                          </div>
                  </div>
@@ -51,31 +52,33 @@
                                 <th>Total Question</th>
                                 <th>Published Date</th>
                                 <th>Responses</th>
+                                <th></th>
                                 </tr>
                             </thead>
 
                                 <tbody>
                                     <tr>
                                     <td>183</td>
-                                    <td>John Doe</td>
+                                    <td>Kim Junmyeon</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-success">Approved</span></td>
+                                    <td><a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a></td>
                                     </tr>
                                     <tr>
                                     <td>219</td>
-                                    <td>Alexander Pierce</td>
+                                    <td>Harry Style</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-warning">Pending</span></td>
                                     </tr>
                                     <tr>
                                     <td>657</td>
-                                    <td>Bob Doe</td>
+                                    <td>Baraa Masoud</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-primary">Approved</span></td>
                                     </tr>
                                     <tr>
                                     <td>175</td>
-                                    <td>Mike Doe</td>
+                                    <td>Afgansyah Reza</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-danger">Denied</span></td>
                                     </tr>
@@ -105,19 +108,19 @@
                                         </tr>
                                         <tr>
                                         <td>219</td>
-                                        <td>Alexander Pierce</td>
+                                        <td>Jefri Nichole</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-warning">Pending</span></td>
                                         </tr>
                                         <tr>
                                         <td>657</td>
-                                        <td>Bob Doe</td>
+                                        <td>Iqbaal Dhiafakhri Ramadhan</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-primary">Approved</span></td>
                                         </tr>
                                         <tr>
                                         <td>175</td>
-                                        <td>Mike Doe</td>
+                                        <td>Aldi Angga Yunanda</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-danger">Denied</span></td>
                                         </tr>
@@ -147,19 +150,19 @@
                                         </tr>
                                         <tr>
                                         <td>219</td>
-                                        <td>Alexander Pierce</td>
+                                        <td>Mark Lee</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-warning">Pending</span></td>
                                         </tr>
                                         <tr>
                                         <td>657</td>
-                                        <td>Bob Doe</td>
+                                        <td>Park Chanyeol</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-primary">Approved</span></td>
                                         </tr>
                                         <tr>
                                         <td>175</td>
-                                        <td>Mike Doe</td>
+                                        <td>Jeon Wonwoo</td>
                                         <td>11-7-2014</td>
                                         <td><span class="tag tag-danger">Denied</span></td>
                                         </tr>
