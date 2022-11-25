@@ -66,7 +66,7 @@
                                     </tr>
                                     <tr>
                                     <td>219</td>
-                                    <td>Harry Style</td>
+                                    <td>Daniel Radcliffe</td>
                                     <td>11-7-2014</td>
                                     <td><span class="tag tag-warning">Pending</span></td>
                                     </tr>
