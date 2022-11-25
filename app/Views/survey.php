@@ -27,10 +27,6 @@
                 <label for="inputDescription">Survey Description</label>
                 <textarea id="inputDescription" class="form-control" rows="4"></textarea>
               </div>
-              <div class="form-group">
-                <label for="inputClientCompany">Company</label>
-                <input type="text" id="inputClientCompany" class="form-control">
-              </div>
             </div>
             <!-- /.card-body -->
           </div>
