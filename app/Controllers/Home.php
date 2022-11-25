@@ -35,7 +35,7 @@ class Home extends BaseController
         return view('resultsurvey');
     }
 
-    public function login()
+    public function new()
     {
         $data = [
             'title' => $this->request->getPost("title"),

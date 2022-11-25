@@ -45,7 +45,7 @@ $routes->get('/mysurvey', 'Home::mysurvey');
 $routes->get('user', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
-$routes->post('/survey', 'Home::login');
+$routes->post('/survey', 'Home::new');
 
 
 /*
