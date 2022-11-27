@@ -18,17 +18,20 @@ class Home extends BaseController
     {
         return view('survey');
     }
-    public function choice()
+    public function choice($id)
     {
-        return view('choice');
+        $data['survey'] = $this->surveyModel->find($id);
+        return view('choice', $data);
     }
     public function dashboard()
     {
-        return view('dashboard');
+        $data['survey'] = $this->surveyModel->find();
+        return view('dashboard', $data);
     }
     public function mysurvey()
     {
-        return view('mysurvey');
+        $data['survey'] = $this->surveyModel->find();
+        return view('mysurvey', $data);
     }
     public function resultsurvey()
     {
@@ -40,10 +43,14 @@ class Home extends BaseController
         $data = [
             'title' => $this->request->getPost("title"),
             'description' => $this->request->getPost("description"),
-            'creator'=> $this->request->getPost('creator'),
+            'creator'=> null
         ];
-
         $this->surveyModel->insert($data);
         return redirect()->to("/survey")->with("success", "Data berhasil disimpan");
+    }
+
+    public function setChoice($id)
+    {
+        dd($this->request->getPost());
     }
 }

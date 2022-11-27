@@ -11,6 +11,7 @@
   <title>ShuyoSurvey | Survey</title>
 
     <section class="content">
+      <form action="/survey" method="post">
       <div class="row justify-content-center">
         <div class="col-md-6">
           <div class="card card-primary">
@@ -21,11 +22,11 @@
             <div class="card-body">
               <div class="form-group">
                 <label for="inputName">Survey Name</label>
-                <input type="text" id="inputName" class="form-control">
+                <input type="text" id="inputName" class="form-control" name="title" required>
               </div>
               <div class="form-group">
                 <label for="inputDescription">Survey Description</label>
-                <textarea id="inputDescription" class="form-control" rows="4"></textarea>
+                <textarea id="inputDescription" class="form-control" name="description" rows="4" required></textarea>
               </div>
             </div>
             <!-- /.card-body -->
@@ -40,7 +41,7 @@
           <button type="submit" class="btn btn-success float-right">Create New Survey</button>
         </div>
       </div>
-
+      </form>
     </section>
     <!-- /.content -->
   </div>

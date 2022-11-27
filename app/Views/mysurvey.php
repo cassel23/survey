@@ -57,82 +57,28 @@
                             </thead>
 
                                 <tbody>
+                                    <?php foreach($survey as $val) : ?>
                                     <tr>
-                                    <td>183</td>
-                                    <td>Indonesia</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-success">Approved</span></td>
-                                    <td>
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
+                                        <td><?= $val['title'] ?></td>
+                                        <td>Indonesia</td>
+                                        <td>11-7-2014</td>
+                                        <td><span class="tag tag-success">Approved</span></td>
+                                        <td>
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
+                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                                <li class="dropdown-divider"></li>
+                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                                </ul>
+                                            </div>
+                                            <a href="/choice/<?= $val['id'] ?>">Choice</a>
+                                        </td>
                                     </tr>
-                                    <tr>
-                                    <td>219</td>
-                                    <td>Chinese</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-warning">Pending</span></td>
-                                    <td>
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>657</td>
-                                    <td>Melayu</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-primary">Approved</span></td>
-                                    <td>
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    </tr>
-                                    <tr>
-                                    <td>175</td>
-                                    <td>Inggris</td>
-                                    <td>11-7-2014</td>
-                                    <td><span class="tag tag-danger">Denied</span></td>
-                                    <td>
-                                        <div class="input-group-prepend">
-                                            <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
-                                            </ul>
-                                        </div>
-                                    </td>
-                                    </tr>
+                                    <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
