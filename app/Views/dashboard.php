@@ -4,6 +4,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+    <title>ShuyoSurvey | Dashboard</title>
+</head>
+
 <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card card-warning shadow">
