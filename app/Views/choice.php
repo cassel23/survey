@@ -115,6 +115,7 @@
                                                 </a>
                                                 </div>
                                             </div>
+
                                             <div class="ml-2">
                                                 <div class="icheck-primary">
                                                     <input type="checkbox" id="remember">
@@ -122,7 +123,7 @@
                                                       Wajib di isi
                                                     </label>
                                                   </div>
-                                          </div>
+                                            </div>
                                     </div>
 
                                     <div class="tab-pane fade" id="vert-tabs-range" role="tabpanel" aria-labelledby="vert-tabs-range-tab">
@@ -134,7 +135,7 @@
                                           </div>
                                         </div>
 
-                                        <div class="form-group">
+                                          <div class="form-group">
                                             <label for="inputName">Rating</label>
                                                 <span class="fa fa-star custom"></span>
                                                 <span class="fa fa-star custom"></span>
@@ -243,7 +244,14 @@
                                               <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                             </div>
 
-                                            
+                                            <div class="form-group">
+                                              <label for="inputName">Rating</label>
+                                                  <span class="far fa-meh"></span>
+                                                  <span class="far fa-smile"></span>
+                                                  <span class="far fa-laugh-beam"></span>
+                                                  <span class="far fa-frown"></span>
+                                                  <span class="far fa-angry"></span>
+                                            </div>
                                           </div>
                                           <div class="ml-2">
                                               <div class="icheck-primary">
