@@ -321,7 +321,7 @@
 
             <div class="row">
              <div class="col-12 col-sm-12">
-               <div class="card card-primary card-tabs">
+               
                  <div class="card card-primary">
                     <div class="card-header">
                        <h3 class="card-title">Daftar Pertanyaan Yang Telah Dibuat</h3>
@@ -332,7 +332,7 @@
                     </div>
 
                  </div>
-               </div>
+              
               </div>
                   
               <!-- /.card -->
