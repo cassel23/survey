@@ -232,7 +232,7 @@
     <div class="card-body home-card-body justify-content-center">
     <div class="row justify-content-center">
         
-         <a class="btn btn-app mx-5 mt-2" style="background-color:powderblue; width: 200px;height: 150px;">
+         <a href="http://localhost:8080/profil" class="btn btn-app mx-5 mt-2" style="background-color:powderblue; width: 200px;height: 150px;">
             <p><i class="fa fa-user-circle-o fa-3x" style="margin-top: 25px;"></i></p>
             <h6>Complete Your Profile</h6>
         </a>
