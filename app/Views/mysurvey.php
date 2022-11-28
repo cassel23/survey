@@ -67,8 +67,8 @@
                                     <?php foreach($survey as $val) : ?>
                                     <tr>
                                         <td><?= $val['title'] ?></td>
-                                        <td>Indonesia</td>
-                                        <td>11-7-2014</td>
+                                        <td>10</td>
+                                        <td>7-8-2019</td>
                                         <td><span class="tag tag-success">Approved</span></td>
                                         <td>
                                             <div class="input-group-prepend">
@@ -100,34 +100,32 @@
                                     <th>Total Question</th>
                                     <th>Published Date</th>
                                     <th>Responses</th>
+                                    <th></th>
                                     </tr>
                                 </thead>
 
                                     <tbody>
+                                    <?php foreach($survey as $val) : ?>
                                         <tr>
-                                        <td>dinda</td>
-                                        <td>5</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-success">4</span></td>
+                                            <td>dinda</td>
+                                            <td>5</td>
+                                            <td>11-7-2014</td>
+                                            <td><span class="tag tag-success">4</span></td>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-info btn-sm" href="#">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Edit
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="#">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Delete
+                                                </a>
+                                            </td>  
                                         </tr>
-                                        <tr>
-                                        <td>219</td>
-                                        <td>Jefri Nichole</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-warning">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                        <td>657</td>
-                                        <td>Iqbaal Dhiafakhri Ramadhan</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-primary">Approved</span></td>
-                                        </tr>
-                                        <tr>
-                                        <td>175</td>
-                                        <td>Aldi Angga Yunanda</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-danger">Denied</span></td>
-                                        </tr>
+                                        
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
@@ -142,34 +140,32 @@
                                     <th>Total Question</th>
                                     <th>Published Date</th>
                                     <th>Responses</th>
+                                    <th></th>
                                     </tr>
                                 </thead>
 
                                     <tbody>
+                                    <?php foreach($survey as $val) : ?>
                                         <tr>
                                         <td>dila</td>
                                         <td>2</td>
-                                        <td>11-7-2014</td>
+                                        <td>11-7-2021</td>
                                         <td><span class="tag tag-success">10</span></td>
+                                        <td class="project-actions text-right">
+                                                <a class="btn btn-info btn-sm" href="#">
+                                                    <i class="fas fa-cloud-upload-alt">
+                                                    </i>
+                                                    Publish
+                                                </a>
+                                                <a class="btn btn-danger btn-sm" href="#">
+                                                    <i class="fas fa-trash">
+                                                    </i>
+                                                    Delete
+                                                </a>
+                                            </td>  
                                         </tr>
-                                        <tr>
-                                        <td>219</td>
-                                        <td>Mark Lee</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-warning">Pending</span></td>
-                                        </tr>
-                                        <tr>
-                                        <td>657</td>
-                                        <td>Park Chanyeol</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-primary">Approved</span></td>
-                                        </tr>
-                                        <tr>
-                                        <td>175</td>
-                                        <td>Jeon Wonwoo</td>
-                                        <td>11-7-2014</td>
-                                        <td><span class="tag tag-danger">Denied</span></td>
-                                        </tr>
+
+                                    <?php endforeach; ?>
                                     </tbody>
                                 </table>
                             </div>
