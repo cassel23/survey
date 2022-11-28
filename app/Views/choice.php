@@ -29,7 +29,7 @@
         <!-- ./row -->
         <form action="/choice/<?= $survey['id'] ?>" method="post">
         <div class="row">
-          <div class="col-12 col-sm-12">
+          <div class="col-8 col-sm-8">
             <div class="card card-primary card-tabs">
               <div class="card-header p-0 pt-1">
                 <ul class="nav nav-tabs" id="custom-tabs-one-tab" role="tablist">
@@ -285,21 +285,41 @@
                                       <input type="submit" value="Save" class="btn btn-success float-right">
                                       </div>
                                     </div>
-                          </div>
+                        </div>
                     </div>
                 </div>
               </div>      
-                          
-                    </div>
+
+              </div>
                   </div>
+
+
+            <div class="row">
+             <div class="col-12 col-sm-12">
+               <div class="card card-primary card-tabs">
+                 <div class="card card-primary">
+                    <div class="card-header">
+                       <h3 class="card-title">Daftar Pertanyaan Yang Telah Dibuat</h3>
+                     </div>
+
+                    <div class="card-body">
+                  
+                    </div>
+
+                 </div>
+               </div>
+              </div>
+                  
               <!-- /.card -->
             </div>
+        </div>
             <div class="row">
-              <div class="col-sm-12">
+              <div class="col-sm-8">
                 <a href="#" class="btn btn-secondary">Cancel</a>
                 <input type="submit" value="Add" class="btn btn-success float-right">
               </div>
             </div>
+
             </form>
         </div>
     </div>
