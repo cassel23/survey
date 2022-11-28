@@ -292,17 +292,17 @@
                           </div>
 
                           <div class="tab-pane fade" id="custom-tabs-one-publish" role="tabpanel" aria-labelledby="custom-tabs-one-publish-tab">
-                          <div class="col-12 mx-5">
-                              <h4>Link Survey</h4>
-                          </div>
+                          <center> 
+                          <h4>Link Survey</h4>
 
                               <div class="card-body">
                                   <div class="row">
-                                    <div class="col-mr-4">
-                                      <input type="submit" value="Generate Link" class="btn btn-success float-right">
+                                      <div class="col-mr-4">
+                                       <input type="submit" value="Generate Link" class="btn btn-success float-right">
                                       </div>
                                   </div>
                               </div>
+                              </center>
                           </div>
                 </div>
               </div>      
