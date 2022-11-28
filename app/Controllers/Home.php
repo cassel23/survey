@@ -23,6 +23,10 @@ class Home extends BaseController
         $data['survey'] = $this->surveyModel->find($id);
         return view('choice', $data);
     }
+    public function profil()
+    {
+        return view('profil');
+    }
     public function dashboard()
     {
         $data['survey'] = $this->surveyModel->find();
