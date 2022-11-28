@@ -176,7 +176,7 @@
                                               <div class="form-group row">
                                                 <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                                 <div class="col-sm-10">
-                                                  <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                                                  <input type="text" class="form-control" id="inputEmail3" placeholder="Email" name="quest_email">
                                                 </div>
                                               </div>
     
@@ -195,7 +195,7 @@
                                               <div class="card-body">
                                                 <div class="form-group">
                                                   <label for="inputName">Question</label>
-                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_image">
                                                 </div>
                                             
                                                 <div class="form-group">
@@ -223,7 +223,7 @@
                                               <div class="card-body">
                                                 <div class="form-group">
                                                   <label for="inputName">Question</label>
-                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                                  <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_date">
                                                 </div>
 
                                                 <div class="ml-2">
@@ -241,7 +241,7 @@
                                           <div class="card-body">
                                             <div class="form-group">
                                               <label for="inputName">Question</label>
-                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_emoticon">
                                             </div>
 
                                             <div class="form-group">
@@ -328,7 +328,9 @@
                      </div>
 
                     <div class="card-body">
-                  
+                    <?php foreach($pertanyaan as $val) : ?>
+                      <p><?= $val['pertanyaan'] ?></p>
+                    <?php endforeach; ?>
                     </div>
 
                  </div>

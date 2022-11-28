@@ -25,6 +25,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
+      <?php if (session()->get('isloggedin')) : ?>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="http://localhost:8080/dashboard" class="nav-link">
           <i class="ml-1 fas fa-tachometer-alt"></i>Dashboard</a>
@@ -37,9 +38,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a href="http://localhost:8080/resultsurvey" class="nav-link">
         <i class="ml-1 fas fa-chart-bar"></i>Result Surveys</a>
       </li>
+      <?php endif; ?>
     </ul>
 
     <!-- Right navbar links -->
+    <?php if (session()->get('isloggedin')) : ?>
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
         <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button" >
@@ -48,6 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         </a>
       </li>
     </ul>
+    <?php endif; ?>
   </nav>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
@@ -111,13 +115,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Control Sidebar -->
   <aside class="control-sidebar " style="width: 200px;height: 100px;">
     <!-- Control sidebar content goes here -->
-    <a href="http://localhost:8080/user" class="nav-link">
     <div class="p-3">
-      <button type="button" class="btn btn-block btn-outline-dark btn-sm">
+      <a href="/logout" class="btn btn-block btn-outline-dark btn-sm">
         Log Out
-      </button>
+      </a>
     </div>
-    </a>
   </aside>
   <!-- /.control-sidebar -->
 

@@ -45,12 +45,14 @@ $routes->post('/choice/(:num)', 'Home::add/$1');
 $routes->get('/dashboard', 'Home::dashboard');
 $routes->get('/resultsurvey', 'Home::resultsurvey');
 $routes->get('/mysurvey', 'Home::mysurvey');
-$routes->get('user', 'User::index');
+$routes->get('login', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
 $routes->get('pertanyaan', 'Pertanyaan::index');
 
 
+$routes->post('login', 'Auth::login');
+$routes->get('logout', 'Auth::logout');
 
 /*
  * --------------------------------------------------------------------
