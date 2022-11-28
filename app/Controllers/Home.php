@@ -39,7 +39,6 @@ class Home extends BaseController
     }
     public function resultsurvey()
     {
-        $data['survey'] = $this->surveyModel->find();
         return view('resultsurvey');
     }
 
