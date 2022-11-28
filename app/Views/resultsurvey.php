@@ -2,6 +2,13 @@
 
 <?= $this->section("content") ?>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+    <title>ShuyoSurvey | Result Survey</title>
+</head>
+
             <label>Nama Survey</label>
             <select class="form-control select2 col-3" style="width: 100%;">
             <option>Alaska</option>
