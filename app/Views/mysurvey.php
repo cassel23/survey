@@ -3,7 +3,14 @@
 <?= $this->section("content") ?>
 <!DOCTYPE html>
 <html>
-  <meta charset="utf-8" />
+  
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+    <title>ShuyoSurvey | My Survey</title>
+</head>
+
     <div class="row">
         <div class="col-12">
              <div class="card">

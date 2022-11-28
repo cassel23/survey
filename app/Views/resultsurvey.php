@@ -2,6 +2,13 @@
 
 <?= $this->section("content") ?>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
+    <title>ShuyoSurvey | Result Survey</title>
+</head>
+
             <label>Nama Survey</label>
             <select class="form-control select2 col-3" style="width: 100%;">
             <option>Alaska</option>
@@ -16,14 +23,6 @@
             <div class="card card-danger mt-3">
             <div class="card-header">
             <h3 class="card-title">Donut Chart</h3>
-            <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse">
-            <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove">
-            <i class="fas fa-times"></i>
-            </button>
-            </div>
             </div>
             <div class="card-body">
             <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
