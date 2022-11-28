@@ -42,7 +42,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <a class="nav-link" data-widget="drop-down" data-slide="true" href="#" role="button">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button" >
           <i class="fas fa-square fa-stack-2x" ></i>
           <i class="fas fa-user-alt fa-lg fa-stack-1x fa-inverse"></i>
         </a>
@@ -109,12 +109,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- /.content-wrapper -->
 
   <!-- Control Sidebar -->
-  <aside class="control-sidebar control-sidebar-dark">
+  <aside class="control-sidebar " style="width: 200px;height: 100px;">
     <!-- Control sidebar content goes here -->
+    <a href="http://localhost:8080/user" class="nav-link">
     <div class="p-3">
-      <h5>Title</h5>
-      <p>Sidebar content</p>
+      <button type="button" class="btn btn-block btn-outline-dark btn-sm">
+        Log Out
+      </button>
     </div>
+    </a>
   </aside>
   <!-- /.control-sidebar -->
 
