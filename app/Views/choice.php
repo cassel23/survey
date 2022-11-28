@@ -39,6 +39,9 @@
                   <li class="nav-item">
                     <a class="nav-link" id="custom-tabs-one-surveysetting-tab" data-toggle="pill" href="#custom-tabs-one-surveysetting" role="tab" aria-controls="custom-tabs-one-surveysetting" aria-selected="false">Survey Setting</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" id="custom-tabs-one-publish-tab" data-toggle="pill" href="#custom-tabs-one-publish" role="tab" aria-controls="custom-tabs-one-publish" aria-selected="false">Publish</a>
+                  </li>
                   </ul>
               </div>
 
@@ -284,9 +287,23 @@
                                       <a href="#" class="btn btn-secondary">Cancel</a>
                                       <input type="submit" value="Save" class="btn btn-success float-right">
                                       </div>
-                                    </div>
-                        </div>
-                    </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          <div class="tab-pane fade" id="custom-tabs-one-publish" role="tabpanel" aria-labelledby="custom-tabs-one-publish-tab">
+                          <center> 
+                          <h4>Link Survey</h4>
+
+                              <div class="card-body">
+                                  <div class="row">
+                                      <div class="col-mr-4">
+                                       <input type="submit" value="Generate Link" class="btn btn-success float-right">
+                                      </div>
+                                  </div>
+                              </div>
+                              </center>
+                          </div>
                 </div>
               </div>      
 
