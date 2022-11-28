@@ -26,7 +26,10 @@
             
             </div>
             <div class="card-body">
+            <?php foreach($survey as $val) : ?>
+            <td><?= $val['title'] ?></td>
             <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+            <?php endforeach; ?>
             </div>
           
             <script src="../../plugins/jquery/jquery.min.js"></script>
