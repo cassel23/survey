@@ -41,6 +41,7 @@ $routes->get('/survey', 'Home::survey');
 $routes->post('/survey', 'Home::new');
 $routes->get('/choice/(:num)', 'Home::choice/$1');
 $routes->post('/choice/(:num)', 'Home::setChoice/$1');
+$routes->post('/choice/(:num)', 'Home::add/$1');
 $routes->get('/dashboard', 'Home::dashboard');
 $routes->get('/resultsurvey', 'Home::resultsurvey');
 $routes->get('/mysurvey', 'Home::mysurvey');
