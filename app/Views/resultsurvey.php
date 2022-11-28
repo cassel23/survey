@@ -19,14 +19,16 @@
             <option>Washington</option>
             </select>
             </div>
-
+          
             <div class="card card-danger mt-3">
             <div class="card-header">
             <h3 class="card-title">Donut Chart</h3>
+            
             </div>
             <div class="card-body">
             <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
             </div>
+          
             <script src="../../plugins/jquery/jquery.min.js"></script>
 
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
