@@ -38,6 +38,7 @@ $routes->set404Override();
 $routes->get('/', 'Home::index');
 $routes->get('/', 'Home::updateprofile');
 $routes->get('/survey', 'Home::survey');
+$routes->post('/survey', 'Home::new');
 $routes->get('/choice/(:num)', 'Home::choice/$1');
 $routes->post('/choice/(:num)', 'Home::setChoice/$1');
 $routes->get('/dashboard', 'Home::dashboard');
@@ -46,7 +47,7 @@ $routes->get('/mysurvey', 'Home::mysurvey');
 $routes->get('user', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
-$routes->post('/survey', 'Home::new');
+
 
 
 /*
