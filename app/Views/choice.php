@@ -30,9 +30,6 @@
                     <a class="nav-link active" id="custom-tabs-one-question-tab" data-toggle="pill" href="#custom-tabs-one-question" role="tab" aria-controls="custom-tabs-one-question" aria-selected="true">Question</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-one-surveysetting-tab" data-toggle="pill" href="#custom-tabs-one-surveysetting" role="tab" aria-controls="custom-tabs-one-surveysetting" aria-selected="false">Survey Setting</a>
-                  </li>
-                  <li class="nav-item">
                     <a class="nav-link" id="custom-tabs-one-publish-tab" data-toggle="pill" href="#custom-tabs-one-publish" role="tab" aria-controls="custom-tabs-one-publish" aria-selected="false">Publish</a>
                   </li>
                   </ul>
@@ -252,6 +249,7 @@
                                               </div>
                                             </div>
                                           </div>
+
                                           <div class="ml-2">
                                               <div class="icheck-primary">
                                                   <input type="checkbox" id="remember">
@@ -282,26 +280,7 @@
                             </div>
                          </div>
                     </div>
-                          <div class="tab-pane fade" id="custom-tabs-one-surveysetting" role="tabpanel" aria-labelledby="custom-tabs-one-surveysetting-tab">
-                              <h4>Additional Setting</h4>
-
-                              <div class="card-body">
-                                  <div class="form-group">
-                                      <label for="inputName">Survey Title</label>
-                                      <input type="text" id="inputName" class="form-control">
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="inputDescription">Survey Description</label>
-                                      <textarea id="inputDescription" class="form-control" rows="4"></textarea>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-mr-4">
-                                      <a href="#" class="btn btn-secondary">Cancel</a>
-                                      <input type="submit" value="Save" class="btn btn-success float-right">
-                                      </div>
-                                  </div>
-                              </div>
-                          </div>
+                      
 
                           <div class="tab-pane fade" id="custom-tabs-one-publish" role="tabpanel" aria-labelledby="custom-tabs-one-publish-tab">
                           <center> 
@@ -333,13 +312,13 @@
                      </div>
 
                     <div class="card-body">
+                    <td>
+                    <button type="button" class="btn btn-block btn-light btn-lg">
                     <?php foreach($pertanyaan as $val) : ?>
-                      <td>
-                    <button type="button" class="btn btn-block btn-light">
                       <p><?= $val['pertanyaan'] ?></p>
-                      </button>
-                    </td>
                     <?php endforeach; ?>
+                    </button>
+                    </td>
                     </div>
 
                  </div>
