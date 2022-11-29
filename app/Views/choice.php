@@ -75,13 +75,16 @@
                                           <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                         </div>
                                         <div class="form-group">
-                                          <label for="inputDescription">Option</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
+                                          <label for="inputDescription">Answer</label>
+                                          <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your answer">
                                         </div>
+                                            <div class="ml-4 mr-4">
+                                          <a href="#" class="btn btn-block btn-danger">
+                                            <i class="fa fa-plus mr-2"></i> 
+                                            Add More
+                                          </a>
+                                          </div>
                                           <div class="ml-2">
                                                <div class="icheck-primary">
                                                   <input type="checkbox" id="remember">
@@ -101,14 +104,16 @@
                                                 <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                               </div>
                                               <div class="form-group">
-                                                <label for="inputDescription">Option</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
+                                                <label for="inputDescription">Answer</label>
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your answer">
                                               </div>
-                                                
+                                                  <div class="ml-4 mr-4">
+                                                <a href="#" class="btn btn-block btn-danger">
+                                                  <i class="fa fa-plus mr-2"></i> 
+                                                  Add More
+                                                </a>
+                                                </div>
                                             </div>
 
                                             <div class="ml-2">
@@ -169,9 +174,9 @@
                                           <div class="tab-pane fade" id="vert-tabs-email" role="tabpanel" aria-labelledby="vert-tabs-email-tab">
                                             <div class="card-body">
                                               <div class="form-group row">
-                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Question</label>
+                                                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
                                                 <div class="col-sm-10">
-                                                  <input type="text" class="form-control" id="inputEmail3" placeholder="Type your question" name="quest_email">
+                                                  <input type="text" class="form-control" id="inputEmail3" placeholder="Email" name="quest_email">
                                                 </div>
                                               </div>
     
@@ -307,17 +312,12 @@
                               </div>
                               </center>
                           </div>
-
-                          <div class="row">
-                           <div class="col-sm-12">
-                            <input type="submit" value="Add" class="btn btn-success float-right">
-                           </div>
-                          </div>
-
                 </div>
               </div>      
-            </div>
-          </div>
+
+              </div>
+                  </div>
+
 
             <div class="row">
              <div class="col-12 col-sm-12">
@@ -329,25 +329,23 @@
 
                     <div class="card-body">
                     <?php foreach($pertanyaan as $val) : ?>
-                      <td>
-                        <button type="button" class="btn btn-block btn-light">
                       <p><?= $val['pertanyaan'] ?></p>
-                        </div>
-                       </button>
-                      </td>                      
                     <?php endforeach; ?>
                     </div>
 
-                    <div class="row">
-                        <div class="col-4 col-sm-12">
-                           <a href="#" class="btn btn-secondary">Cancel</a>
-                           <input type="submit" value="Save" class="btn btn-success float-right">
-                        </div>
-                    </div>
                  </div>
+              
               </div>
+                  
+              <!-- /.card -->
             </div>
         </div>
+            <div class="row">
+              <div class="col-sm-8">
+                <a href="#" class="btn btn-secondary">Cancel</a>
+                <input type="submit" value="Add" class="btn btn-success float-right">
+              </div>
+            </div>
 
             </form>
         </div>
