@@ -18,13 +18,6 @@
           </style>
 </head>
             
-              <center class="mb-3">
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-info">Editor</button>
-                        <button type="button" class="btn btn-info">Publish / share</button>
-                      </div>
-              </center>
-
 <div class="wrapper">        
         <!-- ./row -->
         <form action="/choice/<?= $survey['id'] ?>" method="post">
@@ -258,6 +251,13 @@
                                           </div>
                                         </div>
 
+                       <div class="col-sm-12">
+                            <input type="submit" value="Add" class="btn btn-success float-right">
+                           </div>
+                   
+
+                                     
+
                                         
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                         <div class="info-box bg-gradient-warning">
@@ -306,12 +306,6 @@
                                   </div>
                               </div>
                               </center>
-                          </div>
-
-                          <div class="row">
-                           <div class="col-sm-12">
-                            <input type="submit" value="Add" class="btn btn-success float-right">
-                           </div>
                           </div>
 
                 </div>
