@@ -312,13 +312,13 @@
                      </div>
 
                     <div class="card-body">
-                    <td>
-                    <button type="button" class="btn btn-block btn-light btn-lg">
                     <?php foreach($pertanyaan as $val) : ?>
+                      <td>
+                    <button type="button" class="btn btn-block btn-light">
                       <p><?= $val['pertanyaan'] ?></p>
-                    <?php endforeach; ?>
-                    </button>
+                      </button>
                     </td>
+                    <?php endforeach; ?>
                     </div>
 
                  </div>
