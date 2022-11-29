@@ -68,16 +68,13 @@
                                           <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                         </div>
                                         <div class="form-group">
-                                          <label for="inputDescription">Answer</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your answer">
+                                          <label for="inputDescription">Option</label>
+                                          <input type="text" id="inputName" class="form-control" placeholder="Type your option">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
                                         </div>
-                                            <div class="ml-4 mr-4">
-                                          <a href="#" class="btn btn-block btn-danger">
-                                            <i class="fa fa-plus mr-2"></i> 
-                                            Add More
-                                          </a>
-                                          </div>
                                           <div class="ml-2">
                                                <div class="icheck-primary">
                                                   <input type="checkbox" id="remember">
@@ -97,16 +94,13 @@
                                                 <input type="text" id="inputName" class="form-control" placeholder="Type your question">
                                               </div>
                                               <div class="form-group">
-                                                <label for="inputDescription">Answer</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your answer">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your answer">
+                                                <label for="inputDescription">Option</label>
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
                                               </div>
-                                                  <div class="ml-4 mr-4">
-                                                <a href="#" class="btn btn-block btn-danger">
-                                                  <i class="fa fa-plus mr-2"></i> 
-                                                  Add More
-                                                </a>
-                                                </div>
                                             </div>
 
                                             <div class="ml-2">
@@ -256,14 +250,6 @@
                                           </div>
                                         </div>
 
-                       <div class="col-sm-12">
-                            <input type="submit" value="Add" class="btn btn-success float-right">
-                           </div>
-                   
-
-                                     
-
-                                        
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                         <div class="info-box bg-gradient-warning">
                                           <span class="info-box-icon"><i class="fa fa-mouse-pointer"></i></span>
@@ -273,10 +259,16 @@
                                           <!-- /.info-box-content -->
                                         </div>
                                       </div>
+
+                                      <div class="row">
+                                          <div class="col-sm-12">
+                                            <input type="submit" value="Add" class="btn btn-success float-right">
+                                          </div>
+                                      </div>
+
                                   </div>
                             </div>
-
-                          </div>
+                         </div>
                     </div>
                           <div class="tab-pane fade" id="custom-tabs-one-surveysetting" role="tabpanel" aria-labelledby="custom-tabs-one-surveysetting-tab">
                               <h4>Additional Setting</h4>
@@ -313,12 +305,6 @@
                               </center>
                           </div>
 
-                          <div class="row">
-                           <div class="col-sm-12">
-                            <input type="submit" value="Add" class="btn btn-success float-right">
-                           </div>
-                          </div>
-
                 </div>
               </div>      
 
@@ -335,24 +321,29 @@
                      </div>
 
                     <div class="card-body">
+                    <td>
+                    <button type="button" class="btn btn-block btn-light btn-lg">
                     <?php foreach($pertanyaan as $val) : ?>
                       <p><?= $val['pertanyaan'] ?></p>
                     <?php endforeach; ?>
+                    </button>
+                    </td>
                     </div>
 
                  </div>
               
+                    <div class="row">
+                  <div class="col-sm-12">
+                    <a href="#" class="btn btn-secondary">Cancel</a>
+                    <input type="submit" value="Add" class="btn btn-success float-right">
+                  </div>
+                </div>
+
               </div>
                   
               <!-- /.card -->
             </div>
         </div>
-            <div class="row">
-              <div class="col-sm-8">
-                <a href="#" class="btn btn-secondary">Cancel</a>
-                <input type="submit" value="Add" class="btn btn-success float-right">
-              </div>
-            </div>
 
             </form>
         </div>
