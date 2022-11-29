@@ -13,9 +13,12 @@ class Pertanyaan extends BaseController
         $this->pertanyaanModel = new \App\Models\PertanyaanModel();
     }
 
-    public function index()
+    public function hasilpertanyaan($id)
     {
-        return view('hasilpertanyaan');
+        $data['survey'] = $this->surveyModel->find($id);
+        $data['pertanyaan'] = $this->pertanyaanModel->where("survey_id", $id)->find();
+        // dd($data['pertanyaan']);
+        return view('hasilpertanyaan', $data);
     }
 
 }

@@ -56,7 +56,7 @@ class Home extends BaseController
             'creator'=> null
         ];
         $this->surveyModel->insert($data);
-        return redirect()->to("/survey")->with("success", "Data berhasil disimpan");
+        return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
     }
 
     public function setChoice($id)
