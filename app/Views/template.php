@@ -55,6 +55,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </nav>
   <!-- /.navbar -->
   <!-- Main Sidebar Container -->
+  
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
@@ -71,21 +72,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          <li class="nav-item menu-open border-0">
-            <a href="http://localhost:8080/" class="nav-link active">
-              <i class="nav-icon fas fa-home"></i>
-              <p>
-                Home
-              </p>
-            </a>
-
-          </li>
+               <?php if (session()->get('isloggedin')) : ?> 
+               <li class="nav-item menu-open border-0">
+                  <a href="http://localhost:8080/" class="nav-link active">
+                    <i class="nav-icon fas fa-home"></i>
+                    <p>
+                      Home
+                    </p>
+                  </a>
+                </li>
+                <?php endif; ?>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
+  
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
