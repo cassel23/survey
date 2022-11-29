@@ -123,12 +123,18 @@
                                         </div>
 
                                           <div class="form-group">
-                                            <label for="inputName">Rating</label>
-                                                <span class="fa fa-star custom"></span>
-                                                <span class="fa fa-star custom"></span>
-                                                <span class="fa fa-star custom"></span>
-                                                <span class="fa fa-star custom"></span>
-                                                <span class="fa fa-star custom"></span>
+                                              <label for="inputName">Rating</label>
+                                              <div class="component-preview">
+                                                <div class="answer numeric-scale">
+                                                  <ul>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                  </ul>
+                                                </div>
+                                              </div>
                                           </div>
 
                                         <div class="ml-2">
@@ -233,11 +239,17 @@
 
                                             <div class="form-group">
                                               <label for="inputName">Rating</label>
-                                                  <span class="far fa-meh"></span>
-                                                  <span class="far fa-smile"></span>
-                                                  <span class="far fa-laugh-beam"></span>
-                                                  <span class="far fa-frown"></span>
-                                                  <span class="far fa-angry"></span>
+                                              <div class="component-preview">
+                                                <div class="answer numeric-scale">
+                                                  <ul>
+                                                      <a class="far fa-meh"></a>
+                                                      <a class="far fa-smile"></a>
+                                                      <a class="far fa-laugh-beam"></a>
+                                                      <a class="far fa-frown"></a>
+                                                      <a class="far fa-angry"></a>
+                                                  </ul>
+                                                </div>
+                                              </div>
                                             </div>
                                           </div>
                                           <div class="ml-2">
