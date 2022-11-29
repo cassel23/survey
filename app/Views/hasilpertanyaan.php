@@ -10,16 +10,19 @@
 
             
             <section class="content mx-5">
-                <div class="card" style="background-color:lightsteelblue; width: 1100px;height: 650px;">
+                <div class="card" style="background-color:lightsteelblue; width: 900px;height: 1500px;">
                     <div class="card-body home-card-body">
                         <div class="row">
 
                         <div class="card-body">
+                        <div class="col-md-10 col-sm-12 px-0 question-header">
                           <?php foreach($pertanyaan as $val) : ?>                      
-                        <p><?= $val['pertanyaan'] ?></p>
-                        
-                      <?php endforeach; ?>
-                          </div>
+                             <p><?= $val['pertanyaan'] ?></p>
+                             <div class="choices-container-form">
+                             <input type="text" id="inputName" class="form-control" placeholder="Enter Answer" name="quest_text">
+                          
+                          <?php endforeach; ?>
+                        </div>
 
                         </div>
                     </div>
