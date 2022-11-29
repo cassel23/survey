@@ -48,7 +48,7 @@ $routes->get('/mysurvey', 'Home::mysurvey');
 $routes->get('login', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
-$routes->get('hasilpertanyaan', 'Pertanyaan::index');
+$routes->get('/hasilpertanyaan/(:num)', 'Pertanyaan::hasilpertanyaan/$1');
 
 
 $routes->post('login', 'Auth::login');

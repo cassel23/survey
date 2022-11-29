@@ -8,21 +8,27 @@
     <link rel="shortcut icon" type="image/png" href="/assets/_dist/img/ShuyoSuvey_logo.png"/>
     <title>ShuyoSurvey | Survey Question</title>
 
-            <center>
+            
             <section class="content mx-5">
-                <div class="card" style="background-color:lightsteelblue; width: 1100px;height: 650px;">
-                    <div class="card-body home-card-body justify-content-center">
-                        <div class="row justify-content-center">
+                <div class="card" style="background-color:lightsteelblue; width: 900px;height: 1500px;">
+                    <div class="card-body home-card-body">
+                        <div class="row">
 
                         <div class="card-body">
-
-                          </div>
+                        <div class="col-md-10 col-sm-12 px-0 question-header">
+                          <?php foreach($pertanyaan as $val) : ?>                      
+                             <p><?= $val['pertanyaan'] ?></p>
+                             <div class="choices-container-form">
+                             <input type="text" id="inputName" class="form-control" placeholder="Enter Answer" name="quest_text">
+                          
+                          <?php endforeach; ?>
+                        </div>
 
                         </div>
                     </div>
                 </div>
             </section>
-            </center>
+           
   </html>
 
 <?= $this->endSection() ?>
