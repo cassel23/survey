@@ -15,11 +15,7 @@
                         <div class="row justify-content-center">
 
                         <div class="card-body">
-                          <td>
-                          <?php foreach($pertanyaan as $val) : ?>
-                            <p><?= $val['pertanyaan'] ?></p>
-                          <?php endforeach; ?>
-                          </td>
+
                           </div>
 
                         </div>
