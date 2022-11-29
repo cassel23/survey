@@ -18,7 +18,7 @@
                         <h3 class="card-title">The List Of All Your Survey</h3>
                         <div class="card-tools">
                             <div class="input-group input-group-sm" style="width: 150px;">
-                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+                                <input type="text" name="table_search" class="form-control float-right" placeholder="Search" >
                                  <div class="input-group-append">
                                      <button type="submit" class="btn btn-default">
                                         <i class="fas fa-search"></i>
@@ -82,7 +82,6 @@
                                                 <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
                                                 </ul>
                                             </div>
-                                            <a href="/choice/<?= $val['id'] ?>">Choice</a>
                                         </td>
                                     </tr>
                                     <?php endforeach; ?>
