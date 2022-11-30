@@ -19,7 +19,7 @@
             
 <div class="wrapper">        
         <!-- ./row -->
-        <form action="/edit/<?= $survey['id'] ?>" method="post">
+        <form action="/edit/1<?= $survey['id'] ?>" method="post">
         <div class="row">
           <div class="col-8 col-sm-8">
             <div class="card card-primary card-tabs">
