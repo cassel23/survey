@@ -19,7 +19,7 @@
                           <?php foreach($pertanyaan as $val) : ?>                      
                              <p><?= $val['pertanyaan'] ?></p>
                              <div class="choices-container-form">
-                             <input type="text" id="inputName" class="form-control" placeholder="Enter Answer" name="quest_text">
+                             
                           
                           <?php endforeach; ?>
                         </div>

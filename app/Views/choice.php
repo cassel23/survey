@@ -270,12 +270,6 @@
                                         </div>
                                       </div>
 
-                                      <div class="row">
-                                          <div class="col-sm-12">
-                                            <input type="submit" value="Add" class="btn btn-success float-right">
-                                          </div>
-                                      </div>
-
                                   </div>
                             </div>
                          </div>
@@ -302,41 +296,19 @@
               </div>
                   </div>
 
-
-            <div class="row">
-             <div class="col-12 col-sm-12">
-               
                  <div class="card card-primary">
                     <div class="card-header">
                        <h3 class="card-title">List Question</h3>
                      </div>
 
                     <div class="card-body">
-                    <?php foreach($pertanyaan as $val) : ?>
-                      <td>
-                    <button type="button" class="btn btn-block btn-light">
-                      <p><?= $val['pertanyaan'] ?></p>
-                      </button>
-                    </td>
-                    <?php endforeach; ?>
-                    </div>
-
-                 </div>
-
-
-                 <div class="card card-primary">
-                    <div class="card-header">
-                       <h3 class="card-title">List Question</h3>
-                     </div>
-
-                    <div class="card-body">
+                       <?php foreach($pertanyaan as $val) : ?>
                       <div data- class="question-list-container">
                         <div data->
-                        <?php foreach($pertanyaan as $val) : ?>
                           <ol data- class="list-unstyled saved-list">
                             <li data- class="added-question pr-2 card pb-0 mb-2">
                                     <p> <?= $val['pertanyaan'] ?></p>
-                              <div data- class="pl-3 pl-1 question-title-style">1</div>
+
                               <div class="question-properties">
                                 <div class="title">
                                     <i class="material-icons ">
@@ -348,32 +320,32 @@
                               </div>
                               <?php endforeach; ?>
 
-                              <div data-v-0e4358c5="" class="question-card-saperator"></div>
-                              <a data-v-0e4358c5="" href="javascript:void(0)" class="remove hover-pop text-danger" data-original-title="" title="">
-                                <i data-v-0e4358c5="" class="material-icons md-16">remove_circle</i></a>
+                              
                             </li>
                           </ol>
                         </div>
-                      </div>
                     </div>
                  </div>
 
               
-                    <div class="row">
-                  <div class="col-sm-12">
-                    <a href="#" class="btn btn-secondary">Cancel</a>
-                    <input type="submit" value="Save" class="btn btn-success float-right">
-                  </div>
-                </div>
+  
 
               </div>
+              
                   
               <!-- /.card -->
             </div>
         </div>
+    </div>
+          
 
             </form>
         </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+          <input type="submit" value="Add" class="btn btn-success float-right">
+      </div>
     </div>
 </div>                                
       
