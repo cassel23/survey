@@ -104,7 +104,7 @@
                                 </thead>
 
                                     <tbody>
-                                    <?php foreach($survey as $val) : ?>
+                                    
                                         <tr>
                                             <td>dinda</td>
                                             <td>5</td>
@@ -124,7 +124,7 @@
                                             </td>  
                                         </tr>
                                         
-                                    <?php endforeach; ?>
+                                    
                                     </tbody>
                                 </table>
                             </div>
@@ -144,7 +144,7 @@
                                 </thead>
 
                                     <tbody>
-                                    <?php foreach($survey as $val) : ?>
+                                    
                                         <tr>
                                         <td>dila</td>
                                         <td>2</td>
@@ -164,7 +164,7 @@
                                             </td>  
                                         </tr>
 
-                                    <?php endforeach; ?>
+                                    
                                     </tbody>
                                 </table>
                             </div>
