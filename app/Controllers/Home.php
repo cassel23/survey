@@ -114,6 +114,6 @@ class Home extends BaseController
     {
             $data['pertanyaan'] = $this->pertanyaanModel->where("pertanyaan_id", $id)->find();
             // dd($data['pertanyaan']);
-            return view('edit', $data);
+            return view('edit/1', $data);
     }
 }
