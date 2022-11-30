@@ -49,6 +49,7 @@ $routes->get('login', 'User::index');
 $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
 $routes->get('/hasilpertanyaan/(:num)', 'Pertanyaan::hasilpertanyaan/$1');
+$routes->get('/edit/(:num)', 'Home::editpertanyaan/$1');
 
 
 $routes->post('login', 'Auth::login');
