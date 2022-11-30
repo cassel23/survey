@@ -110,4 +110,10 @@ class Home extends BaseController
         return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
     }
 
+    public function editpertanyaan($id)
+    {
+            $data['pertanyaan'] = $this->pertanyaanModel->where("pertanyaan_id", $id)->find();
+            // dd($data['pertanyaan']);
+            return view('edit', $data);
+    }
 }
