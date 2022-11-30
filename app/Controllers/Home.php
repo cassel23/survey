@@ -2,16 +2,19 @@
 
 namespace App\Controllers;
 
+use App\Models\ChoiceModel;
 use App\Models\PertanyaanModel;
 
 class Home extends BaseController
 {
     private $surveyModel;
     private $pertanyaanModel;
+    private $choiceModel;
 
     public function __construct() {
         $this->surveyModel = new \App\Models\SurveyModel();
         $this->pertanyaanModel = new PertanyaanModel();
+        $this->choiceModel = new ChoiceModel();
     }
     
     public function index()
@@ -40,7 +43,11 @@ class Home extends BaseController
     }
     public function mysurvey()
     {
-        $data['survey'] = $this->surveyModel->find();
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
         return view('mysurvey', $data);
     }
     public function resultsurvey()
@@ -96,6 +103,26 @@ class Home extends BaseController
                 'survey_id' => $id
             ];
             $this->pertanyaanModel->insert($data);
+        }elseif (!empty($this->request->getPost("quest_single_choice"))) {
+            // dd($this->request->getPost());
+            $data = [
+                'survey_id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_single_choice"),
+                'jenis' => 'single-choice',
+            ];
+            $this->pertanyaanModel->insert($data);
+            $pertanyaan_id = $this->pertanyaanModel->getInsertID();
+            // dd($pertanyaan_id);
+            $choice = [];
+            foreach ($this->request->getPost('opt_single') as $val) {
+                if (!empty($val)) {
+                    $choice[] = [
+                        'pilihan' => $val,
+                        'pertanyaan_id' => $pertanyaan_id
+                    ];
+                }
+            }
+            $this->choiceModel->insertBatch($choice);
         }
         return redirect()->to('/choice/' . $id);
     }
@@ -112,8 +139,57 @@ class Home extends BaseController
 
     public function editpertanyaan($id)
     {
-            $data['pertanyaan'] = $this->pertanyaanModel->where("pertanyaan_id", $id)->find();
+            $data['pertanyaan'] = $this->pertanyaanModel->find($id);
             // dd($data['pertanyaan']);
-            return view('edit/1', $data);
+            return view('edit', $data);
+    }
+
+    public function pertanyaan($id)
+    {
+        $pertanyaan = $this->pertanyaanModel->find($id);
+        if (!empty($this->request->getPost("quest_text"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_text")
+            ];
+            $this->pertanyaanModel->save($data);
+        }elseif (!empty($this->request->getPost("quest_email"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_email"),
+            ];
+            $this->pertanyaanModel->save($data);
+        }elseif (!empty($this->request->getPost("quest_image"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_image"),
+            ];
+            $this->pertanyaanModel->save($data);
+        }elseif (!empty($this->request->getPost("quest_date"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_date"),
+            ];
+            $this->pertanyaanModel->save($data);
+        }elseif (!empty($this->request->getPost("quest_emoticon"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_emoticon"),
+            ];
+            $this->pertanyaanModel->save($data);
+        }
+        return redirect()->to('/choice/' . $pertanyaan['survey_id']);
+    }
+
+    public function publish($id)
+    {
+        $this->surveyModel->save(
+            [
+                'id' => $id,
+                'status' => 'PUBLISHED',
+                'published_at' => date("Y-m-d H:i:s")
+            ]
+        );
+        return redirect()->to('/choice/' . $id);
     }
 }

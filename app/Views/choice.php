@@ -62,15 +62,15 @@
                                       <div class="card-body">
                                         <div class="form-group">
                                           <label for="inputName">Question</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                          <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_single_choice">
                                         </div>
                                         <div class="form-group">
                                           <label for="inputDescription">Option</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" name="opt_single[]" class="form-control" placeholder="Type your option">
+                                          <input type="text" id="inputName" name="opt_single[]" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" name="opt_single[]" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" name="opt_single[]" class="form-control  mt-2" placeholder="Type your option">
+                                          <input type="text" id="inputName" name="opt_single[]" class="form-control  mt-2" placeholder="Type your option">
                                         </div>
                                           <div class="ml-2">
                                                <div class="icheck-primary">
@@ -283,7 +283,10 @@
                               <div class="card-body">
                                   <div class="row">
                                       <div class="col-mr-4">
-                                       <input type="submit" value="Generate Link" class="btn btn-success float-right">
+                                        <?php if($survey['status'] == 'PUBLISHED') : ?>
+                                          <a href="/hasilpertanyaan/<?= $survey['id'] ?>" target="_blank"><?= getenv("app.baseURL") . "hasilpertanyaan/".$survey['id'] ?></a>
+                                        <?php endif; ?>
+                                        <a class="btn btn-success float-right" href="/survey/publish/<?= $survey['id'] ?>">Generate Link</a>
                                       </div>
                                   </div>
                               </div>
@@ -303,10 +306,11 @@
 
                     <div class="card-body">
                        <?php foreach($pertanyaan as $val) : ?>
-                      <div data- class="question-list-container">
-                        <div data->
-                          <ol data- class="list-unstyled saved-list">
-                            <li data- class="added-question pr-2 card pb-0 mb-2">
+                      <div  class="question-list-container">
+                        <a href="/edit/<?= $val['id'] ?>">
+                        <div >
+                          <ol class="list-unstyled saved-list">
+                            <li  class="added-question pr-2 card pb-0 mb-2">
                                     <p> <?= $val['pertanyaan'] ?></p>
 
                               <div class="question-properties">
@@ -323,8 +327,8 @@
                               
                             </li>
                           </ol>
-                        </div>
                     </div>
+                       </a>
                  </div>
 
               
@@ -339,14 +343,14 @@
     </div>
           
 
-            </form>
-        </div>
+  </div>
+</div>
+  <div class="row">
+    <div class="col-sm-8">
+      <input type="submit" value="Add" class="btn btn-success float-right">
     </div>
-    <div class="row">
-      <div class="col-sm-8">
-          <input type="submit" value="Add" class="btn btn-success float-right">
-      </div>
-    </div>
+  </div>
+</form>
 </div>                                
       
 <?= $this->endSection() ?>

@@ -67,8 +67,8 @@
                                     <?php foreach($survey as $val) : ?>
                                     <tr>
                                         <td><?= $val['title'] ?></td>
-                                        <td>10</td>
-                                        <td>7-8-2019</td>
+                                        <td><?= $val['jumlah_pertanyaan'] ?></td>
+                                        <td><?= $val['published_at'] ?></td>
                                         <td><span class="tag tag-success">Approved</span></td>
                                         <td>
                                             <div class="input-group-prepend">

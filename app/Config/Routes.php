@@ -50,6 +50,8 @@ $routes->get('user/signin', 'User::signin');
 $routes->post('user/signin', 'User::create');
 $routes->get('/hasilpertanyaan/(:num)', 'Pertanyaan::hasilpertanyaan/$1');
 $routes->get('/edit/(:num)', 'Home::editpertanyaan/$1');
+$routes->post('/pertanyaan/(:num)', 'Home::pertanyaan/$1');
+$routes->get('/survey/publish/(:num)', 'Home::publish/$1');
 
 
 $routes->post('login', 'Auth::login');

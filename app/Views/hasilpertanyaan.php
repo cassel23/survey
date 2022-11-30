@@ -17,10 +17,16 @@
                         <div class="card-body">
                         <div class="col-md-10 col-sm-12 px-0 question-header">
                           <?php foreach($pertanyaan as $val) : ?>                      
-                             <p><?= $val['pertanyaan'] ?></p>
                              <div class="choices-container-form">
-                             
-                          
+                              <div class="form-group">
+                                <label><?= $val['pertanyaan'] ?></label>
+                                <?php if($val['jenis'] == 'text' || $val['jenis'] == 'email') : ?>
+                                <input type="<?= $val['jenis'] ?>" name="<?= $val['id'] ?>" class="form-control">
+                                <?php endif; ?>
+                                <?php if($val['jenis'] == 'emoticon') : ?>
+                                  
+                                  <?php endif; ?>
+                              </div>
                           <?php endforeach; ?>
                         </div>
 
