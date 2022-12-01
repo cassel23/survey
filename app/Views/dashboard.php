@@ -54,9 +54,9 @@
                             <div class="card-footer justify-content-center">
                                 <div class="row justify-content-center">
                                 <div class="col-4 text-center">
-                                    <div style="display:inline;width:60px;height:60px;">
-                                        <canvas style="width: 60px; height: 60px;" width="75" height="75"></canvas>
-                                        <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60" data-fgcolor="#39CCCC" readonly="readonly" style="width: 34px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px none; background: none; font: bold 12px Arial; text-align: center; color: rgb(57, 204, 204); padding: 0px; appearance: none;"></div>
+                                    <div style="display:inline;width:60px;height:60px;">                                        
+                                    <canvas style="width: 60px; height: 60px;" width="75" height="75"></canvas>
+                                        <input type="text" class="knob mr-auto" data-readonly="true" value="<?= $val['published_at'] ?>" data-width="60" data-height="60" data-fgcolor="#39CCCC" readonly="readonly" style="width: 120px; height: 20px; position: absolute; vertical-align: middle; margin-top: 20px; margin-left: -47px; border: 0px none; background: none; font: bold 12px Arial; text-align: center; color: rgb(57, 204, 204); padding: 0px; appearance: none;"></div>
                                         <div class="text-white">Published On</div>
                                      </div>
                                     <div class="col-4 text-center">
