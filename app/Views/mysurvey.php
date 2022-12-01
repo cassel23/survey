@@ -105,7 +105,7 @@
 
                                     <tbody>
                                     
-                                        <tr>
+                                        <tr id="grup">
                                             <td>dinda</td>
                                             <td><?= $val['jumlah_pertanyaan'] ?></td>
                                             <td><?= $val['published_at'] ?></td>
@@ -125,6 +125,14 @@
                                                 </a>
                                             </td>  
                                         </tr>
+
+                                        <script>
+                                            function myFunction(){
+                                            var x = document.getElementById("grup");
+                                            x.remove(x.selectedIndex);
+                                            
+                                            }
+                                        </script>
                                     
                                     </tbody>
                                 </table>
