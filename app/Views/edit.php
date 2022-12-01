@@ -72,10 +72,7 @@
                                       </div>
                                     </div>
 
-                                   <div class="tab-pane fade" id="vert-tabs-multiple" role="tabpanel" aria-labelledby="vert-tabs-multiple-tab">
 
-                                          
-                                    </div>
 
                                     <div class="tab-pane fade" id="vert-tabs-range" role="tabpanel" aria-labelledby="vert-tabs-range-tab">
 
@@ -118,6 +115,28 @@
                                               <label for="inputName">Question</label>
                                               <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_text" value="<?= $pertanyaan['pertanyaan'] ?>">
                                             </div>
+                                          </div>
+                                          <?php endif; ?>
+                                          <?php if($pertanyaan['jenis'] == 'range') : ?>
+                                          <div class="card-body">
+                                            <div class="form-group">
+                                              <label for="inputName">Question</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_range" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                              <label for="inputName">Rating</label>
+                                              <div class="component-preview">
+                                                <div class="answer numeric-scale">
+                                                  <ul>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                  </ul>
+                                                </div>
+                                              </div>
                                           </div>
                                           <?php endif; ?>
                                           <?php if($pertanyaan['jenis'] == 'email') : ?>

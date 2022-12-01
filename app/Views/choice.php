@@ -115,7 +115,7 @@
                                         <div class="card-body">
                                           <div class="form-group">
                                             <label for="inputName">Question</label>
-                                            <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                            <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_range">
                                           </div>
                                         </div>
 

@@ -75,6 +75,13 @@ class Home extends BaseController
                 'survey_id' => $id
             ];
             $this->pertanyaanModel->insert($data);
+        }elseif (!empty($this->request->getPost("quest_range"))) {
+            $data = [
+                'jenis' => 'range',
+                'pertanyaan' => $this->request->getPost("quest_range"),
+                'survey_id' => $id
+            ];
+            $this->pertanyaanModel->insert($data);
         }elseif (!empty($this->request->getPost("quest_email"))) {
             $data = [
                 'jenis' => 'email',
@@ -172,6 +179,12 @@ class Home extends BaseController
             $data = [
                 'id' => $id,
                 'pertanyaan' => $this->request->getPost("quest_text")
+            ];
+            $this->pertanyaanModel->save($data);
+        }elseif (!empty($this->request->getPost("quest_range"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_range")
             ];
             $this->pertanyaanModel->save($data);
         }elseif (!empty($this->request->getPost("quest_email"))) {
