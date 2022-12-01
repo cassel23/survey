@@ -125,15 +125,13 @@
                                                 </a>
                                             </td>  
                                         </tr>
-
                                         <script>
                                             function myFunction(){
-                                            var x = document.getElementById("grup");
-                                            x.remove(x.selectedIndex);
+                                            const element = document.getElementById("arc");
+                                            element.remove();
                                             
                                             }
-                                        </script>
-                                    
+                                        </script>          
                                     </tbody>
                                 </table>
 
@@ -155,7 +153,7 @@
 
                                     <tbody>
                                     
-                                        <tr>
+                                        <tr id="arc">
                                         <td>dila</td>
                                         <td><?= $val['jumlah_pertanyaan'] ?></td>
                                         <td><?= $val['published_at'] ?></td>
@@ -166,15 +164,22 @@
                                                     </i>
                                                     Publish
                                                 </a>
-                                                <a class="btn btn-danger btn-sm" href="#">
+                                                <a>
+                                                    <button onclick="myFunction()" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash">
                                                     </i>
                                                     Delete
+                                                    </button>
                                                 </a>
                                             </td>  
                                         </tr>
-
-                                    
+                                        <script>
+                                            function myFunction(){
+                                            const element = document.getElementById("arc");
+                                            element.remove();
+                                            
+                                            }
+                                        </script>
                                     </tbody>
                                 </table>
                             </div>
