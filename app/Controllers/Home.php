@@ -168,6 +168,7 @@ class Home extends BaseController
     public function editpertanyaan($id)
     {
             $data['pertanyaan'] = $this->pertanyaanModel->find($id);
+            $data['choice'] = $this->choiceModel->where("pertanyaan_id", $id)->find();
             // dd($data['pertanyaan']);
             return view('edit', $data);
     }
