@@ -39,27 +39,42 @@
                                                 </div>
                                               </div>
                                             </div>
-                                          </div>
+                                               
                                 <?php endif; ?>
 
                                 <?php if($val['jenis'] == 'range') : ?>
-                                  <ul>
-                                     <a class="fa fa-star custom"></a>
-                                     <a class="fa fa-star custom"></a>
-                                     <a class="fa fa-star custom"></a>
-                                     <a class="fa fa-star custom"></a>
-                                     <a class="fa fa-star custom"></a>
-                                  </ul>
+                                  <div class="form-group">
+                                              <div class="component-preview">
+                                                <div class="answer numeric-scale">
+                                                  <ul>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                      <a class="fa fa-star custom"></a>
+                                                  </ul>
+                                                </div>
+                                              </div>
+                                          </div>
                                 <?php endif; ?>
 
                                 <?php if($val['jenis'] == 'single-choice') : ?>
-                                  <div class="custom-control custom-radio">
-                                    <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
-                                    <label for="customRadio1" class="custom-control-label">Custom Radio</label>
-                                  </div>
-                                <?php endif; ?>
-
-                              </div>
+                                  <div class="form-check">
+                          <input class="form-check-input" type="radio" name="radio1">
+                          <label class="form-check-label"></label>
+                          <?php foreach($choice as $val) : ?> <tr>
+                            <td><?= $val['pilihan'] ?></td></tr>
+                          <?php endforeach; ?>
+                           </div>
+                            <div class="form-check">
+                          <input class="form-check-input" type="radio" name="radio1" checked>
+                          <label class="form-check-label">Radio checked</label>
+                        </div>
+                      </div>
+                      </div>
+                                 
+                        
+                                 <?php endif; ?>  
                           <?php endforeach; ?>
                         </div>
 
