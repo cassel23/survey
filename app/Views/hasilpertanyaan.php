@@ -23,9 +23,14 @@
                                 <?php if($val['jenis'] == 'text' || $val['jenis'] == 'email') : ?>
                                 <input type="<?= $val['jenis'] ?>" name="<?= $val['id'] ?>" class="form-control">
                                 <?php endif; ?>
+                                
                                 <?php if($val['jenis'] == 'emoticon') : ?>
-                                  
-                                  <?php endif; ?>
+
+                                <?php endif; ?>
+
+                                <?php if($val['jenis'] == 'range') : ?>
+
+                                <?php endif; ?>
                               </div>
                           <?php endforeach; ?>
                         </div>
