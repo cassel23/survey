@@ -169,7 +169,7 @@ class Home extends BaseController
     {
             $data['pertanyaan'] = $this->pertanyaanModel->find($id);
             $data['choice'] = $this->choiceModel->where("pertanyaan_id", $id)->find();
-            // dd($data['pertanyaan']);
+            // dd($data['pertanyaan','pilihan']);
             return view('edit', $data);
     }
 
@@ -219,15 +219,15 @@ class Home extends BaseController
             ];
             $this->pertanyaanModel->save($data);
          }elseif (!empty($this->request->getPost("opt_single[]"))) {
-            $choice = [
+            $data = [
                 'id' => $id,
                 'pertanyaan' => $this->request->getPost("opt_single[]"),
             ];
-            $this->choiceModel->save($choice);
-    }
-
+            $this->pertanyaanModel->save($data);
+        }
         return redirect()->to('/choice/' . $pertanyaan['survey_id']);
     }
+
 
     public function publish($id)
     {
