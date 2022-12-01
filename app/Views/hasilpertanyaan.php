@@ -25,12 +25,40 @@
                                 <?php endif; ?>
                                 
                                 <?php if($val['jenis'] == 'emoticon') : ?>
-
+                                  <div class="form-group">
+                                              <label for="inputName">Rating</label>
+                                              <div class="component-preview">
+                                                <div class="answer numeric-scale">
+                                                  <ul>
+                                                      <a class="far fa-meh"></a>
+                                                      <a class="far fa-smile"></a>
+                                                      <a class="far fa-laugh-beam"></a>
+                                                      <a class="far fa-frown"></a>
+                                                      <a class="far fa-angry"></a>
+                                                  </ul>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
                                 <?php endif; ?>
 
                                 <?php if($val['jenis'] == 'range') : ?>
-
+                                  <ul>
+                                     <a class="fa fa-star custom"></a>
+                                     <a class="fa fa-star custom"></a>
+                                     <a class="fa fa-star custom"></a>
+                                     <a class="fa fa-star custom"></a>
+                                     <a class="fa fa-star custom"></a>
+                                  </ul>
                                 <?php endif; ?>
+
+                                <?php if($val['jenis'] == 'single-choice') : ?>
+                                  <div class="custom-control custom-radio">
+                                    <input class="custom-control-input" type="radio" id="customRadio1" name="customRadio">
+                                    <label for="customRadio1" class="custom-control-label">Custom Radio</label>
+                                  </div>
+                                <?php endif; ?>
+
                               </div>
                           <?php endforeach; ?>
                         </div>
