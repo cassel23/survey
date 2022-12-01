@@ -121,6 +121,7 @@ class Home extends BaseController
                         'pertanyaan_id' => $pertanyaan_id
                     ];
                 }
+                
             }
             $this->choiceModel->insertBatch($choice);
         }elseif (!empty($this->request->getPost("quest_multiple_choice"))) {
