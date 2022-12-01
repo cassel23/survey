@@ -28,9 +28,6 @@
                   <li class="nav-item">
                     <a class="nav-link active" id="custom-tabs-one-question-tab" data-toggle="pill" href="#custom-tabs-one-question" role="tab" aria-controls="custom-tabs-one-question" aria-selected="true">Question</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" id="custom-tabs-one-publish-tab" data-toggle="pill" href="#custom-tabs-one-publish" role="tab" aria-controls="custom-tabs-one-publish" aria-selected="false">Publish</a>
-                  </li>
                   </ul>
               </div>
 
@@ -77,29 +74,7 @@
 
                                    <div class="tab-pane fade" id="vert-tabs-multiple" role="tabpanel" aria-labelledby="vert-tabs-multiple-tab">
 
-                                            <div class="card-body">
-                                              <div class="form-group">
-                                                <label for="inputName">Question</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question">
-                                              </div>
-                                              <div class="form-group">
-                                                <label for="inputDescription">Option</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                              </div>
-                                            </div>
-
-                                            <div class="ml-2">
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" id="remember">
-                                                    <label for="remember" style="font-size: 90%;">
-                                                      Wajib di isi
-                                                    </label>
-                                                  </div>
-                                            </div>
+                                          
                                     </div>
 
                                     <div class="tab-pane fade" id="vert-tabs-range" role="tabpanel" aria-labelledby="vert-tabs-range-tab">
@@ -221,6 +196,49 @@
                                             </div>
                                           <?php endif; ?>
                                       </div>
+                                      <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
+                                          <?php if($pertanyaan['jenis'] == 'single-choice') : ?>
+                                          <div class="card-body">
+                                            <div class="form-group">
+                                              <label for="inputName">Question</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_single_choice" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                            </div>
+                                              <div class="form-group">
+                                                <label for="inputDescription">Option</label>
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                              </div>
+                                          </div>
+                                          <?php endif; ?>
+                                          <?php if($pertanyaan['jenis'] == 'multiple-choice') : ?>
+                                            <div class="card-body">
+                                              <div class="form-group">
+                                                <label for="inputName">Question</label>
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_multiple_choice" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                              </div>
+                                              <div class="form-group">
+                                                <label for="inputDescription">Option</label>
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                              </div>
+                                            </div>
+
+                                            <div class="ml-2">
+                                                <div class="icheck-primary">
+                                                    <input type="checkbox" id="remember">
+                                                    <label for="remember" style="font-size: 90%;">
+                                                      Wajib di isi
+                                                    </label>
+                                                  </div>
+                                            </div>
+                                            <?php endif; ?>
+                                      </div>
 
                                       <div class="row">
                                           <div class="col-sm-12">
@@ -232,22 +250,6 @@
                             </div>
                          </div>
                     </div>
-                      
-
-                          <div class="tab-pane fade" id="custom-tabs-one-publish" role="tabpanel" aria-labelledby="custom-tabs-one-publish-tab">
-                          <center> 
-                          <h4>Link Survey</h4>
-
-                              <div class="card-body">
-                                  <div class="row">
-                                      <div class="col-mr-4">
-                                       <input type="submit" value="Generate Link" class="btn btn-success float-right">
-                                      </div>
-                                  </div>
-                              </div>
-                              </center>
-                          </div>
-
                 </div>
               </div>      
             </div>
