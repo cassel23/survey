@@ -125,33 +125,6 @@
                                                 </a>
                                             </td>  
                                         </tr>
-                                        
-                                        <tr id="grup">
-                                            <td>dinda</td>
-                                            <td><?= $val['jumlah_pertanyaan'] ?></td>
-                                            <td><?= $val['published_at'] ?></td>
-                                            <td><span class="tag tag-success">4</span></td>
-                                            <td class="project-actions text-right">
-                                                <a class="btn btn-info btn-sm" href="#">
-                                                    <i class="fas fa-pencil-alt">
-                                                    </i>
-                                                    Edit
-                                                </a>
-                                                <a class="btn btn-danger btn-sm">
-                                                    <input type='button' value='Hapus' class="fas fa-trash" onclick="myFunction()">
-                                                    </input>
-                                                    Delete
-                                                </a>
-                                            </td>  
-                                        </tr>
-
-                                        <script>
-                                            function myFunction(){
-                                            var x = document.getElementById("grup");
-                                            x.remove(x.selectedIndex);
-                                            
-                                            }
-                                        </script>
                                     
                                     </tbody>
                                 </table>
