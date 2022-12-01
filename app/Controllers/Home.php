@@ -114,7 +114,7 @@ class Home extends BaseController
             $pertanyaan_id = $this->pertanyaanModel->getInsertID();
             // dd($pertanyaan_id);
             $choice = [];
-            foreach ($this->request->getPost('opt_single') as $val) {
+            foreach ($this->request->getPost("opt_single[]") as $val) {
                 if (!empty($val)) {
                     $choice[] = [
                         'pilihan' => $val,
@@ -123,6 +123,26 @@ class Home extends BaseController
                 }
             }
             $this->choiceModel->insertBatch($choice);
+        }elseif (!empty($this->request->getPost("quest_multiple_choice"))) {
+                // dd($this->request->getPost());
+                $data = [
+                    'survey_id' => $id,
+                    'pertanyaan' => $this->request->getPost("quest_multiple_choice"),
+                    'jenis' => 'multiple-choice',
+                ];
+                $this->pertanyaanModel->insert($data);
+                $pertanyaan_id = $this->pertanyaanModel->getInsertID();
+                // dd($pertanyaan_id);
+                $choice = [];
+                foreach ($this->request->getPost("opt_multiple[]") as $val) {
+                    if (!empty($val)) {
+                        $choice[] = [
+                            'pilihan' => $val,
+                            'pertanyaan_id' => $pertanyaan_id
+                        ];
+                    }
+                }
+                $this->choiceModel->insertBatch($choice);
         }
         return redirect()->to('/choice/' . $id);
     }
@@ -177,7 +197,20 @@ class Home extends BaseController
                 'pertanyaan' => $this->request->getPost("quest_emoticon"),
             ];
             $this->pertanyaanModel->save($data);
-        }
+        }elseif (!empty($this->request->getPost("quest_single_choice"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_single_choice"),
+            ];
+            $this->pertanyaanModel->save($data);
+         }elseif (!empty($this->request->getPost("opt_single[]"))) {
+            $choice = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("opt_single[]"),
+            ];
+            $this->choiceModel->save($choice);
+    }
+
         return redirect()->to('/choice/' . $pertanyaan['survey_id']);
     }
 

@@ -88,15 +88,15 @@
                                             <div class="card-body">
                                               <div class="form-group">
                                                 <label for="inputName">Question</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question">
+                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_multiple_choice">
                                               </div>
                                               <div class="form-group">
                                                 <label for="inputDescription">Option</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" name="opt_multiple[]" class="form-control" placeholder="Type your option">
+                                                <input type="text" id="inputName" name="opt_multiple[]" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" name="opt_multiple[]" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" name="opt_multiple[]" class="form-control mt-2" placeholder="Type your option">
+                                                <input type="text" id="inputName" name="opt_multiple[]" class="form-control mt-2" placeholder="Type your option">
                                               </div>
                                             </div>
 
@@ -297,16 +297,22 @@
               </div>      
 
               </div>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <input type="submit" value="Add" class="btn btn-success float-right">
+                  </div>
+                </div>
                   </div>
 
-                 <div class="card card-primary">
+                 <div class="card card-primary col-sm-4">
                     <div class="card-header">
                        <h3 class="card-title">List Question</h3>
                      </div>
 
                     <div class="card-body">
+
                        <?php foreach($pertanyaan as $val) : ?>
-                      <div  class="question-list-container">
+                      <div class="question-list-container">
                         <a href="/edit/<?= $val['id'] ?>">
                         <div >
                           <ol class="list-unstyled saved-list">
@@ -321,20 +327,13 @@
                                   <!----> <!----> <!---->
                                 </div>
                               </div>
-                              </div>
-                              <?php endforeach; ?>
-
-                              
                             </li>
                           </ol>
+                        </div>
+                        </a>
+                      </div>
+                      <?php endforeach; ?>
                     </div>
-                       </a>
-                 </div>
-
-              
-  
-
-              </div>
               
                   
               <!-- /.card -->
@@ -345,11 +344,6 @@
 
   </div>
 </div>
-  <div class="row">
-    <div class="col-sm-8">
-      <input type="submit" value="Add" class="btn btn-success float-right">
-    </div>
-  </div>
 </form>
 </div>                                
       
