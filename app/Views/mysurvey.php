@@ -107,8 +107,8 @@
                                     
                                         <tr>
                                             <td>dinda</td>
-                                            <td>5</td>
-                                            <td>11-7-2014</td>
+                                            <td><?= $val['jumlah_pertanyaan'] ?></td>
+                                            <td><?= $val['published_at'] ?></td>
                                             <td><span class="tag tag-success">4</span></td>
                                             <td class="project-actions text-right">
                                                 <a class="btn btn-info btn-sm" href="#">
@@ -116,17 +116,46 @@
                                                     </i>
                                                     Edit
                                                 </a>
-                                                <a class="btn btn-danger btn-sm" href="#">
+                                                <a>
+                                                    <button onclick="myFunction()" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash">
                                                     </i>
                                                     Delete
+                                                    </button>
                                                 </a>
                                             </td>  
                                         </tr>
                                         
+                                        <tr id="grup">
+                                            <td>dinda</td>
+                                            <td><?= $val['jumlah_pertanyaan'] ?></td>
+                                            <td><?= $val['published_at'] ?></td>
+                                            <td><span class="tag tag-success">4</span></td>
+                                            <td class="project-actions text-right">
+                                                <a class="btn btn-info btn-sm" href="#">
+                                                    <i class="fas fa-pencil-alt">
+                                                    </i>
+                                                    Edit
+                                                </a>
+                                                <a class="btn btn-danger btn-sm">
+                                                    <input type='button' value='Hapus' class="fas fa-trash" onclick="myFunction()">
+                                                    </input>
+                                                    Delete
+                                                </a>
+                                            </td>  
+                                        </tr>
+
+                                        <script>
+                                            function myFunction(){
+                                            var x = document.getElementById("grup");
+                                            x.remove(x.selectedIndex);
+                                            
+                                            }
+                                        </script>
                                     
                                     </tbody>
                                 </table>
+
                             </div>
                          </div>
 
@@ -147,8 +176,8 @@
                                     
                                         <tr>
                                         <td>dila</td>
-                                        <td>2</td>
-                                        <td>11-7-2021</td>
+                                        <td><?= $val['jumlah_pertanyaan'] ?></td>
+                                        <td><?= $val['published_at'] ?></td>
                                         <td><span class="tag tag-success">10</span></td>
                                         <td class="project-actions text-right">
                                                 <a class="btn btn-info btn-sm" href="#">
