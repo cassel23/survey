@@ -224,11 +224,10 @@
                                             </div>
                                               <div class="form-group">
                                                 <label for="inputDescription">Option</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <?php foreach($choice as $val) : ?> <tr>
+                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_single[]" value="<?= $val['pilihan'] ?>">
+                                                </tr>
+                                                <?php endforeach; ?>
                                               </div>
                                           </div>
                                           <?php endif; ?>
