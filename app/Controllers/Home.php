@@ -45,14 +45,89 @@ class Home extends BaseController
     {
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "PUBLISHED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->groupBy("survey.id")
         ->find();
+
+        $data['surveydraft'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "DRAFT")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveyarc'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "ARCHIEVED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
         return view('mysurvey', $data);
     }
     public function resultsurvey()
     {
         return view('resultsurvey');
+    }
+
+    public function archievesurvey($id){
+
+        $this->surveyModel->set("status", "ARCHIEVED")
+                        ->where("id", $id)
+                        ->update();
+
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "PUBLISHED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveydraft'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "DRAFT")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        $data['surveyarc'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "ARCHIEVED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        return view('mysurvey', $data);
+    }
+
+    
+    public function deletesurvey($id){
+
+        $this->surveyModel->where("id", $id)->delete();
+
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "PUBLISHED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveydraft'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "DRAFT")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        $data['surveyarc'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "ARCHIEVED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        return view('mysurvey', $data);
     }
 
     public function new()
@@ -63,7 +138,14 @@ class Home extends BaseController
             'creator'=> null
         ];
         $this->surveyModel->insert($data);
-        return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
+        // return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
+
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+        return view('mysurvey', $data);
     }
 
     public function setChoice($id)
@@ -176,6 +258,13 @@ class Home extends BaseController
     public function pertanyaan($id)
     {
         $pertanyaan = $this->pertanyaanModel->find($id);
+        // echo 'singchoice :';
+        // echo $this->request->getPost("quest_single_choice");
+        // echo '<br>opt';
+        // echo sizeof($this->request->getPost("opt_single[]"));
+ 
+        // echo $pertanyaan;
+
         if (!empty($this->request->getPost("quest_text"))) {
             $data = [
                 'id' => $id,
@@ -215,16 +304,18 @@ class Home extends BaseController
         }elseif (!empty($this->request->getPost("quest_single_choice"))) {
             $data = [
                 'id' => $id,
-                'pertanyaan' => $this->request->getPost("quest_single_choice"),
+                'pertanyaan' => $this->request->getPost("quest_single_choice")
             ];
             $this->pertanyaanModel->save($data);
-         }elseif (!empty($this->request->getPost("opt_single[]"))) {
-            $data = [
-                'id' => $id,
-                'pertanyaan' => $this->request->getPost("opt_single[]"),
-            ];
-            $this->pertanyaanModel->save($data);
-        }
+
+            foreach($this->request->getPost("opt_single[]") as $key => $val) {
+                if (!empty($val)) {
+                    $this->choiceModel->set('pilihan', $val)
+                    ->where('id', $this->request->getPost("pilihan_id[]")[$key])
+                    ->update();
+                }
+            }
+         }
         return redirect()->to('/choice/' . $pertanyaan['survey_id']);
     }
 

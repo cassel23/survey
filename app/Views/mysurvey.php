@@ -75,9 +75,13 @@
                                                 <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                                <li class="dropdown-item"><a href="/choice/<?= $val['id'] ?>"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
                                                 <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
-                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a></li>
+                                                <li class="dropdown-item">
+                                                <form action="/archievesurvey/<?= $val['id'] ?>"  method="post" id="archieve_form">
+                                                    <a href="javascript:{}" onclick="document.getElementById('archieve_form').submit(); return false;"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey
+                                                    </a>
+                                                </form></li>
                                                 <li class="dropdown-divider"></li>
                                                 <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
                                                 </ul>
@@ -105,8 +109,9 @@
 
                                     <tbody>
                                     
+                                    <?php foreach($surveydraft as $val) : ?>
                                         <tr id="grup">
-                                            <td>dinda</td>
+                                            <td><?= $val['title'] ?></td>
                                             <td><?= $val['jumlah_pertanyaan'] ?></td>
                                             <td><?= $val['published_at'] ?></td>
                                             <td><span class="tag tag-success">4</span></td>
@@ -117,21 +122,17 @@
                                                     Edit
                                                 </a>
                                                 <a>
-                                                    <button onclick="myFunction()" class="btn btn-danger btn-sm">
+                                                <form action="/deletesurvey/<?= $val['id'] ?>"  method="post">
+                                                    <button type="submit" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash">
-                                                    </i>
-                                                    Delete
+                                                        </i>
+                                                        Delete
                                                     </button>
+                                                </form>
                                                 </a>
                                             </td>  
                                         </tr>
-                                        <script>
-                                            function myFunction(){
-                                            const element = document.getElementById("arc");
-                                            element.remove();
-                                            
-                                            }
-                                        </script>          
+                                    <?php endforeach;?>          
                                     </tbody>
                                 </table>
 
@@ -153,8 +154,9 @@
 
                                     <tbody>
                                     
+                                    <?php foreach($surveyarc as $val) : ?>
                                         <tr id="arc">
-                                        <td>dila</td>
+                                        <td><?= $val['title'] ?></td>
                                         <td><?= $val['jumlah_pertanyaan'] ?></td>
                                         <td><?= $val['published_at'] ?></td>
                                         <td><span class="tag tag-success">10</span></td>
@@ -173,6 +175,7 @@
                                                 </a>
                                             </td>  
                                         </tr>
+                                    <?php endforeach; ?>
                                         <script>
                                             function myFunction(){
                                             const element = document.getElementById("arc");

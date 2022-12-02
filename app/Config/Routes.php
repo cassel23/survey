@@ -53,6 +53,8 @@ $routes->post('/hasilpertanyaan/(:num)', 'Pertanyaan::hasilpertanyaan/$1');
 $routes->get('/edit/(:num)', 'Home::editpertanyaan/$1');
 $routes->post('/pertanyaan/(:num)', 'Home::pertanyaan/$1');
 $routes->get('/survey/publish/(:num)', 'Home::publish/$1');
+$routes->post('/archievesurvey/(:num)', 'Home::archievesurvey/$1');
+$routes->post('/deletesurvey/(:num)', 'Home::deletesurvey/$1');
 
 
 $routes->post('login', 'Auth::login');

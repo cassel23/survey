@@ -7,5 +7,5 @@ use CodeIgniter\Model;
 class ChoiceModel extends Model
 {
     protected $table      = 'choice';
-    protected $allowedFields = ['pilihan', 'pertanyaan_id'];
+    protected $allowedFields = ['id', 'pilihan', 'pertanyaan_id'];
 }

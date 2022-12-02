@@ -59,16 +59,21 @@
                                 <?php endif; ?>
 
                                 <?php if($val['jenis'] == 'single-choice') : ?>
-                                  <div class="form-check">
+                                  <!-- <div class="form-check">
                           <input class="form-check-input" type="radio" name="radio1">
-                          <label class="form-check-label"></label>
-                          <?php foreach($choice as $val) : ?> <tr>
-                            <td><?= $val['pilihan'] ?></td></tr>
-                          <?php endforeach; ?>
+                          <label class="form-check-label"></label> -->
                            </div>
                             <div class="form-check">
-                          <input class="form-check-input" type="radio" name="radio1" checked>
-                          <label class="form-check-label">Radio checked</label>
+                              <?php foreach($choice as $val) : ?>
+                                <table>
+                                  <tr>
+                                    <td>
+                                      <input class="form-check-input" type="radio" name="radio1" checked>
+                                      <label class="form-check-label"><?= $val['pilihan'] ?></label>
+                                    </td>
+                                  </tr>
+                                </table>
+                              <?php endforeach; ?>
                         </div>
                       </div>
                       </div>
