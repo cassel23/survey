@@ -46,67 +46,6 @@
                             </div>
                               <div class="col-7 col-sm-9">
                                 <div class="tab-content" id="vert-tabs-tabContent">  
-                                  <div class="tab-pane text-left fade" id="vert-tabs-single" role="tabpanel" aria-labelledby="vert-tabs-single-tab">
-
-                                      <div class="card-body">
-                                        <div class="form-group">
-                                          <label for="inputName">Question</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your question">
-                                        </div>
-                                        <div class="form-group">
-                                          <label for="inputDescription">Option</label>
-                                          <input type="text" id="inputName" class="form-control" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                          <input type="text" id="inputName" class="form-control  mt-2" placeholder="Type your option">
-                                        </div>
-                                          <div class="ml-2">
-                                               <div class="icheck-primary">
-                                                  <input type="checkbox" id="remember">
-                                                  <label for="remember" style="font-size: 90%;">
-                                                    Wajib di isi
-                                                  </label>
-                                                </div>
-                                          </div>
-                                      </div>
-                                    </div>
-
-
-
-                                    <div class="tab-pane fade" id="vert-tabs-range" role="tabpanel" aria-labelledby="vert-tabs-range-tab">
-
-                                        <div class="card-body">
-                                          <div class="form-group">
-                                            <label for="inputName">Question</label>
-                                            <input type="text" id="inputName" class="form-control" placeholder="Type your question">
-                                          </div>
-                                        </div>
-
-                                          <div class="form-group">
-                                              <label for="inputName">Rating</label>
-                                              <div class="component-preview">
-                                                <div class="answer numeric-scale">
-                                                  <ul>
-                                                      <a class="fa fa-star custom"></a>
-                                                      <a class="fa fa-star custom"></a>
-                                                      <a class="fa fa-star custom"></a>
-                                                      <a class="fa fa-star custom"></a>
-                                                      <a class="fa fa-star custom"></a>
-                                                  </ul>
-                                                </div>
-                                              </div>
-                                          </div>
-
-                                        <div class="ml-2">
-                                            <div class="icheck-primary">
-                                                <input type="checkbox" id="remember">
-                                                <label for="remember" style="font-size: 90%;">
-                                                  Wajib di isi
-                                                </label>
-                                              </div>
-                                        </div>
-                                        </div>
 
                                       <div class="tab-pane text-left fade active show" id="vert-tabs-default" role="tabpanel" aria-labelledby="vert-tabs-default-tab">
                                           <?php if($pertanyaan['jenis'] == 'text') : ?>
@@ -233,29 +172,20 @@
                                           </div>
                                           <?php endif; ?>
                                           <?php if($pertanyaan['jenis'] == 'multiple-choice') : ?>
-                                            <div class="card-body">
-                                              <div class="form-group">
-                                                <label for="inputName">Question</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_multiple_choice" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                              </div>
+                                          <div class="card-body">
+                                            <div class="form-group">
+                                              <label for="inputName">Question</label>
+                                              <input type="text" id="inputName" class="form-control" placeholder="Type your question" name="quest_multiple_choice" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                            </div>
                                               <div class="form-group">
                                                 <label for="inputDescription">Option</label>
-                                                <input type="text" id="inputName" class="form-control" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
-                                                <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $pertanyaan['pertanyaan'] ?>">
+                                                <?php foreach($choice as $val) : ?> <tr>
+                                                  <input type="hidden" name="pilihan_id[]" value="<?= $val['id'] ?>">
+                                                  <input type="text" id="inputName" class="form-control mt-2" placeholder="Type your option" name="opt_multiple[]" value="<?= $val['pilihan'] ?>">
+                                                </tr>
+                                                <?php endforeach; ?>
                                               </div>
-                                            </div>
-
-                                            <div class="ml-2">
-                                                <div class="icheck-primary">
-                                                    <input type="checkbox" id="remember">
-                                                    <label for="remember" style="font-size: 90%;">
-                                                      Wajib di isi
-                                                    </label>
-                                                  </div>
-                                            </div>
+                                          </div>
                                             <?php endif; ?>
                                       </div>
 

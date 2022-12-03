@@ -39,6 +39,13 @@ class Home extends BaseController
     public function dashboard()
     {
         $data['survey'] = $this->surveyModel->find();
+        $data['survey_chart'] = $this->surveyModel->select("title, date(respon.waktu) as y, count(respon.pertanyaan_id) as a")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
+        ->groupBy("survey.id")
+        ->groupBy("date(respon.waktu)")
+        ->find();
+
         return view('dashboard', $data);
     }
     public function mysurvey()
@@ -58,17 +65,30 @@ class Home extends BaseController
         ->find();
 
         $data['surveyarc'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.pertanyaan_id) as count_responses")
         ->where("status", "ARCHIEVED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
-        ->find();     
+        ->find();
 
         return view('mysurvey', $data);
     }
     public function resultsurvey()
     {
         return view('resultsurvey');
+    }
+
+    public function publish($id)
+    {
+        $this->surveyModel->save(
+            [
+                'id' => $id,
+                'status' => 'PUBLISHED',
+                'published_at' => date("Y-m-d H:i:s")
+            ]
+        );
+        return redirect()->to('/choice/' . $id);
     }
 
     public function archievesurvey($id){
@@ -92,19 +112,22 @@ class Home extends BaseController
         ->find();     
 
         $data['surveyarc'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.pertanyaan_id) as count_responses")
         ->where("status", "ARCHIEVED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->find();     
 
         return view('mysurvey', $data);
     }
 
-    
-    public function deletesurvey($id){
+    public function publishsurvey($id){
 
-        $this->surveyModel->where("id", $id)->delete();
+        $this->surveyModel->set("status", "PUBLISHED")
+                        ->set("published_at", date("Y-m-d H:i:s"))
+                        ->where("id", $id)
+                        ->update();
 
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
@@ -121,9 +144,40 @@ class Home extends BaseController
         ->find();     
 
         $data['surveyarc'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.pertanyaan_id) as count_responses")
         ->where("status", "ARCHIEVED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        return view('mysurvey', $data);
+    }
+    
+    public function deletesurvey($id){       
+
+        $this->surveyModel->where("id",$id)->delete();
+        $this->pertanyaanModel->where("survey_id",$id)->delete();
+
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "PUBLISHED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveydraft'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "DRAFT")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();     
+
+        $data['surveyarc'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.id) as count_responses")
+        ->where("status", "ARCHIEVED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon", "respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->find();     
 
@@ -140,9 +194,26 @@ class Home extends BaseController
         $this->surveyModel->insert($data);
         // return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
 
+        
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "PUBLISHED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveydraft'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->where("status", "DRAFT")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->groupBy("survey.id")
+        ->find();
+
+        $data['surveyarc'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.pertanyaan_id) as count_responses")
+        ->where("status", "ARCHIEVED")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->find();
         return view('mysurvey', $data);
@@ -315,20 +386,22 @@ class Home extends BaseController
                     ->update();
                 }
             }
+         }elseif (!empty($this->request->getPost("quest_multiple_choice"))) {
+            $data = [
+                'id' => $id,
+                'pertanyaan' => $this->request->getPost("quest_multiple_choice")
+            ];
+            $this->pertanyaanModel->save($data);
+
+            foreach($this->request->getPost("opt_multiple[]") as $key => $val) {
+                if (!empty($val)) {
+                    $this->choiceModel->set('pilihan', $val)
+                    ->where('id', $this->request->getPost("pilihan_id[]")[$key])
+                    ->update();
+                }
+            }
          }
         return redirect()->to('/choice/' . $pertanyaan['survey_id']);
     }
 
-
-    public function publish($id)
-    {
-        $this->surveyModel->save(
-            [
-                'id' => $id,
-                'status' => 'PUBLISHED',
-                'published_at' => date("Y-m-d H:i:s")
-            ]
-        );
-        return redirect()->to('/choice/' . $id);
-    }
 }

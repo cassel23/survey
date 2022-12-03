@@ -76,14 +76,17 @@
                                                 </button>
                                                 <ul class="dropdown-menu">
                                                 <li class="dropdown-item"><a href="/choice/<?= $val['id'] ?>"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
-                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-clone"></i> Copy Survey</a></li>
                                                 <li class="dropdown-item">
-                                                <form action="/archievesurvey/<?= $val['id'] ?>"  method="post" id="archieve_form">
-                                                    <a href="javascript:{}" onclick="document.getElementById('archieve_form').submit(); return false;"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey
-                                                    </a>
-                                                </form></li>
-                                                <li class="dropdown-divider"></li>
-                                                <li class="dropdown-item"><a href="#"><i class="ml-1 far fa-trash-alt"></i> Delete Survey</a></li>
+                                                    <form action="/archievesurvey/<?= $val['id'] ?>"  method="post" id="archieve_form<?= $val['id'] ?>">
+                                                        <a href="javascript:{}" onclick="document.getElementById('archieve_form<?= $val['id'] ?>').submit(); return false;"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a>
+                                                    </form>
+                                                </li>
+                                                <li class="dropdown-item">
+                                                    <form action="/deletesurvey/<?= $val['id'] ?>"  method="post" id="delete_form<?= $val['id'] ?>">    
+                                                        <a href="javascript:{}" onclick="document.getElementById('delete_form<?= $val['id'] ?>').submit(); return false;"><i class="ml-1 far fas fa-trash-alt"></i>  Delete Survey</a>  
+                                                    </form>    
+                                                </li>
+
                                                 </ul>
                                             </div>
                                         </td>
@@ -116,13 +119,19 @@
                                             <td><?= $val['published_at'] ?></td>
                                             <td><span class="tag tag-success">4</span></td>
                                             <td class="project-actions text-right">
-                                                <a class="btn btn-info btn-sm" href="#">
+                                                <form action="/publishsurvey/<?= $val['id'] ?>" class="d-inline" method="post" id="publish_form<?= $val['id'] ?>">
+                                                        <a href="javascript:{}" class="btn btn-info btn-sm" onclick="document.getElementById('publish_form<?= $val['id'] ?>').submit(); return false;">
+                                                            <i class="ml-1 fas fa-cloud-upload-alt"> </i>
+                                                            Publish
+                                                        </a>
+                                                    </form>
+                                                <a class="btn btn-secondary d-inline" href="/choice/<?= $val['id'] ?>" style="height: 30%;">
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                     Edit
                                                 </a>
                                                 <a>
-                                                <form action="/deletesurvey/<?= $val['id'] ?>"  method="post">
+                                                <form action="/deletesurvey/<?= $val['id'] ?>" class="d-inline" method="post">
                                                     <button type="submit" class="btn btn-danger btn-sm">
                                                     <i class="fas fa-trash">
                                                         </i>
@@ -159,21 +168,20 @@
                                         <td><?= $val['title'] ?></td>
                                         <td><?= $val['jumlah_pertanyaan'] ?></td>
                                         <td><?= $val['published_at'] ?></td>
-                                        <td><span class="tag tag-success">10</span></td>
-                                        <td class="project-actions text-right">
-                                                <a class="btn btn-info btn-sm" href="#">
-                                                    <i class="fas fa-cloud-upload-alt">
-                                                    </i>
+                                        <td><span class="tag tag-success"><?= $val['count_responses'] ?></span></td>
+                                        <td>
+                                            <form action="/publishsurvey/<?= $val['id'] ?>"  class="d-inline" method="post" id="publish_form<?= $val['id'] ?>">
+                                                <a href="javascript:{}" class="btn btn-info btn-sm" onclick="document.getElementById('publish_form<?= $val['id'] ?>').submit(); return false;">
+                                                    <i class="ml-1 fas fa-cloud-upload-alt"> </i>
                                                     Publish
                                                 </a>
-                                                <a>
-                                                    <button onclick="myFunction()" class="btn btn-danger btn-sm">
-                                                    <i class="fas fa-trash">
-                                                    </i>
-                                                    Delete
-                                                    </button>
-                                                </a>
-                                            </td>  
+                                            </form>
+                                            <button onclick="myFunction()" class="btn btn-danger btn-sm d-inline">
+                                                <i class="fas fa-trash">
+                                                </i>
+                                                Delete
+                                            </button>
+                                        </td>  
                                         </tr>
                                     <?php endforeach; ?>
                                         <script>
