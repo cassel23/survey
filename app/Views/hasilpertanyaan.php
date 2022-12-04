@@ -10,19 +10,20 @@
 
             
             <section class="content mx-5">
-                <div class="card" style="background-color:lightsteelblue; width: 900px;height: 1500px;">
+                <div class="card" style="background-color:lightsteelblue; width: 900px;">
                     <div class="card-body home-card-body">
                         <div class="row">
+
 
                           <div class="card-body">
                             <div class="col-md-10 col-sm-12 px-0 question-header">
                             <div class="row">
-                              <div class="col-12 col-sm-4">
-                                <div class="info-box bg-light">
-                                    <span class="info-box-content">
-                                      
-                                      <?php foreach($pertanyaan as $val) : ?>                      
-                                        <div class="choices-container-form">
+                              <div class="col-12 col-sm-12">
+                                
+                                <?php foreach($pertanyaan as $val) : ?>                      
+                                  <div class="choices-container-form">
+                                          <div class="info-box bg-light">
+                                              <span class="info-box-content">
                                           <div class="form-group">
                                             <label><?= $val['pertanyaan'] ?></label>
                                             <?php if($val['jenis'] == 'text' || $val['jenis'] == 'email') : ?>
@@ -63,32 +64,65 @@
                                     <?php endif; ?>
                                     
                                     <?php if($val['jenis'] == 'single-choice') : ?>
-                                      <!-- <div class="form-check">
+                                      <div class="form-check">
                                         <input class="form-check-input" type="radio" name="radio1">
-                                        <label class="form-check-label"></label> -->
-                                        <!-- </div> -->
-                                        <div class="form-check">
-                                            <?php foreach($choice as $val) : ?>
-                                              <table>
-                                                <tr>
-                                                  <td>
-                                                    <input class="form-check-input" type="radio" name="radio1" checked>
-                                                    <label class="form-check-label"><?= $val['pilihan'] ?></label>
-                                                  </td>
-                                                </tr>
-                                              </table>
-                                              <?php endforeach; ?>
-                                            </div>
+                                        <label class="form-check-label">
+                                          <?php foreach($choice as $val) : ?> 
+                                          <table>
+                                                  <tr>
+                                                    <td><?= $val['pilihan'] ?></td>
+                                                  </tr>
+                                                </table>
+                                                <?php endforeach; ?>
+                                              </label>
+                                        
+                                      </div>
+                                      <?php endif; ?>  
+
+                                      <?php if($val['jenis'] == 'multiple-choice') : ?>
+                                      <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="radio1">
+                                        <label class="form-check-label">
+                                          <?php foreach($choice as $val) : ?> 
+                                          <table>
+                                                  <tr>
+                                                    <td><?= $val['pilihan'] ?></td>
+                                                  </tr>
+                                                </table>
+                                                <?php endforeach; ?>
+                                              </label>
+                                        
+                                      </div>
+                                      <?php endif; ?>  
+                                      
+                                      <?php if($val['jenis'] == 'image') : ?>
+                                        <div class="card col-12 col-sm-12" style="background-color:lightgoldenrodyellow;">
+                                        <div class="form-group">
+                                                  <center><label for="exampleInputFile">Image input</label></center>
+                                                    <div class="input-group">
+                                                      <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                                          <label class="custom-file-label" for="exampleInputFile">Choose Image</label>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                    <?php endif; ?>
+
+
                                           </div>
                                     </div>
                                     
                             
-                          <?php endif; ?>  
                           <?php endforeach; ?>
 
                                     </span>
                       </div>
-
+                          <div class="row">
+                            <div class="col-sm-7 mt-5">
+                              <input type="submit" value="Submit" class="btn btn-success float-right">
+                            </div>
+                          </div>
                           </div>
                         </div>
                         </div>
@@ -98,9 +132,7 @@
                     </div>
                   </div>
                 </div>
-                    </section>
-                    
+                    </section>                    
                     </html>
                     
-                    <?= $this->endSection() ?>
-                    
+ <?= $this->endSection() ?>    

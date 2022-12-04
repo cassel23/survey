@@ -24,7 +24,21 @@ class Pertanyaan extends BaseController
         $data['pertanyaan'] = $this->pertanyaanModel->where("survey_id", $id)->find();
         $data['choice'] = $this->choiceModel->where("pertanyaan_id", $id)->find();
         // dd($data['pertanyaan','pilihan']);
+        
         return view('hasilpertanyaan', $data);
+
+        foreach($this->request->getPost("opt_single[]") as $key => $val) {
+            if (!empty($val)) {
+                $this->choiceModel->set('pilihan', $val)
+                ->where('id', $this->request->getPost("pilihan_id[]")[$key])
+                ->update();
+            }
+        }    
     }
+    public function submit()
+    {
+    
+    }
+
 
 }

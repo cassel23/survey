@@ -284,7 +284,7 @@
                                   <div class="row">
                                       <div class="col-mr-4">
                                         <?php if($survey['status'] == 'PUBLISHED') : ?>
-                                          <a href="/hasilpertanyaan/<?= $survey['id'] ?>" target="_blank"><?= getenv("app.baseURL") . "hasilpertanyaan/".$survey['id'] ?></a>
+                                          <a type="text" id="inputName" class="form-control" href="/hasilpertanyaan/<?= $survey['id'] ?>" target="_blank"><?= getenv("app.baseURL") . "hasilpertanyaan/".$survey['id'] ?></a>
                                         <?php endif; ?>
                                         <a class="btn btn-success float-right" href="/survey/publish/<?= $survey['id'] ?>">Generate Link</a>
                                       </div>
