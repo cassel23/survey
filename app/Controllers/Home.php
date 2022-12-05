@@ -152,7 +152,6 @@ class Home extends BaseController
         ->find();     
 
         return view('mysurvey', $data);
-        
     }
     
     public function deletesurvey($id){       

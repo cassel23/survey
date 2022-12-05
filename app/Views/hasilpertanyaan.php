@@ -10,6 +10,18 @@
 
             
             <section class="content mx-5">
+
+<div class="card" style="background-color:darkblue; width: 900px;">
+  <div class="card-body home-card-body">
+    <div class="row">
+    <div class="card-body">
+
+    </div>
+    </div>
+  </div>
+</div>
+
+
                 <div class="card" style="background-color:lightsteelblue; width: 900px;">
                     <div class="card-body home-card-body">
                         <div class="row">
