@@ -242,11 +242,6 @@
             <h6>Create Survey</h6>
         </a>
 
-        <a class="btn btn-app mx-5 mt-2" style="background-color:powderblue; width: 200px;height: 150px;">
-            <p><i class="fa fa-gears fa-3x" style="margin-top: 25px;"></i></p>
-            <h6>Setting</h6>
-        </a>
-
         
     </div>
 </section>
