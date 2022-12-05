@@ -75,15 +75,15 @@
                                                 <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
                                                 </button>
                                                 <ul class="dropdown-menu">
-                                                <li class="dropdown-item"><a href="/choice/<?= $val['id'] ?>"><i class="ml-1 far fa-edit"></i> Edit Survey</a></li>
+                                                <li class="dropdown-item"><a href="/choice/<?= $val['id'] ?>"><i class="mx-2 far fa-edit ml-2"></i>Edit Survey</a></li>
                                                 <li class="dropdown-item">
                                                     <form action="/archievesurvey/<?= $val['id'] ?>"  method="post" id="archieve_form<?= $val['id'] ?>">
-                                                        <a href="javascript:{}" onclick="document.getElementById('archieve_form<?= $val['id'] ?>').submit(); return false;"><i class="ml-1 far fa-file-archive"></i>  Archieve Survey</a>
+                                                        <a href="javascript:{}" onclick="document.getElementById('archieve_form<?= $val['id'] ?>').submit(); return false;"><i class="mx-2 far fa-file-archive ml-2" style="text-align:left ;"></i>Archieve Survey</a>
                                                     </form>
                                                 </li>
                                                 <li class="dropdown-item">
                                                     <form action="/deletesurvey/<?= $val['id'] ?>"  method="post" id="delete_form<?= $val['id'] ?>">    
-                                                        <a href="javascript:{}" onclick="document.getElementById('delete_form<?= $val['id'] ?>').submit(); return false;"><i class="ml-1 far fas fa-trash-alt"></i>  Delete Survey</a>  
+                                                        <a href="javascript:{}" onclick="document.getElementById('delete_form<?= $val['id'] ?>').submit(); return false;"><i class="mx-2 far fas fa-trash-alt ml-2"></i>Delete Survey</a>  
                                                     </form>    
                                                 </li>
 
@@ -125,7 +125,7 @@
                                                             Publish
                                                         </a>
                                                     </form>
-                                                <a class="btn btn-secondary d-inline" href="/choice/<?= $val['id'] ?>" style="height: 30%;">
+                                                <a class="btn btn-warning btn-sm" href="/choice/<?= $val['id'] ?>" style="height: 30%;">
                                                     <i class="fas fa-pencil-alt">
                                                     </i>
                                                     Edit

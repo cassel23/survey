@@ -278,16 +278,26 @@
 
                           <div class="tab-pane fade" id="custom-tabs-one-publish" role="tabpanel" aria-labelledby="custom-tabs-one-publish-tab">
                           <center> 
-                          <h4>Link Survey</h4>
+                          
+                          <h4 style="font-family:serif ;">Link Survey</h4>
 
                               <div class="card-body">
-                                  <div class="row">
-                                      <div class="col-mr-4">
-                                        <?php if($survey['status'] == 'PUBLISHED') : ?>
-                                          <a type="text" id="inputName" class="form-control" href="/hasilpertanyaan/<?= $survey['id'] ?>" target="_blank"><?= getenv("app.baseURL") . "hasilpertanyaan/".$survey['id'] ?></a>
-                                        <?php endif; ?>
-                                        <a class="btn btn-success float-right" href="/survey/publish/<?= $survey['id'] ?>">Generate Link</a>
-                                      </div>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <span class="input-group-text">
+                                      <i class="fa fa-link"></i>
+                                    </span>
+                                    <div class="row">
+                                        <div class="col-mr-4">
+                                          <?php if($survey['status'] == 'PUBLISHED') : ?>
+                                            
+                                            <a type="text" id="inputName" class="form-control" href="/hasilpertanyaan/<?= $survey['id'] ?>" target="_blank"><?= getenv("app.baseURL") . "hasilpertanyaan/".$survey['id'] ?></a>
+                                          
+                                            <?php endif; ?>
+                                          </div>
+                                          
+                                    </div>
+                                    </div>
                                   </div>
                               </div>
                               </center>
