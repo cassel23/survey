@@ -69,7 +69,7 @@
                                         <td><?= $val['title'] ?></td>
                                         <td><?= $val['jumlah_pertanyaan'] ?></td>
                                         <td><?= $val['published_at'] ?></td>
-                                        <td><span class="tag tag-success">Approved</span></td>
+                                        <td><?= $val['count_responses']?></td>
                                         <td>
                                             <div class="input-group-prepend">
                                                 <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">
@@ -117,7 +117,7 @@
                                             <td><?= $val['title'] ?></td>
                                             <td><?= $val['jumlah_pertanyaan'] ?></td>
                                             <td><?= $val['published_at'] ?></td>
-                                            <td><span class="tag tag-success">4</span></td>
+                                            <td><?= $val['count_responses']?></td>
                                             <td class="project-actions text-right">
                                                 <form action="/publishsurvey/<?= $val['id'] ?>" class="d-inline" method="post" id="publish_form<?= $val['id'] ?>">
                                                         <a href="javascript:{}" class="btn btn-info btn-sm" onclick="document.getElementById('publish_form<?= $val['id'] ?>').submit(); return false;">
@@ -168,7 +168,7 @@
                                         <td><?= $val['title'] ?></td>
                                         <td><?= $val['jumlah_pertanyaan'] ?></td>
                                         <td><?= $val['published_at'] ?></td>
-                                        <td><span class="tag tag-success"><?= $val['count_responses'] ?></span></td>
+                                        <td><?= $val['count_responses']?></td>
                                         <td>
                                             <form action="/publishsurvey/<?= $val['id'] ?>"  class="d-inline" method="post" id="publish_form<?= $val['id'] ?>">
                                                 <a href="javascript:{}" class="btn btn-info btn-sm" onclick="document.getElementById('publish_form<?= $val['id'] ?>').submit(); return false;">

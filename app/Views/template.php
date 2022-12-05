@@ -14,6 +14,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="/assets/_dist/css/adminlte.min.css">
 
   <link rel="stylesheet" href="/assets/plugins/daterangepicker/daterangepicker.css">
+
+  <?= $this->renderSection("css") ?>
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -139,6 +141,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/assets/_dist/js/adminlte.min.js"></script>
 <script src="/assets/plugins/moment/moment.min.js"></script>
 <script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
+<?= $this->renderSection("js") ?>
 <script>
   $('#reservationdate').datetimepicker({
         format: 'L'

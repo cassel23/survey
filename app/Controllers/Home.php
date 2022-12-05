@@ -51,21 +51,23 @@ class Home extends BaseController
     public function mysurvey()
     {
         $data['survey'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "PUBLISHED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->find();
 
         $data['surveydraft'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "DRAFT")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->find();
 
         $data['surveyarc'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(respon.pertanyaan_id) as count_responses")
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "ARCHIEVED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
