@@ -140,6 +140,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <script src="/assets/plugins/moment/moment.min.js"></script>
 <script src="/assets/plugins/daterangepicker/daterangepicker.js"></script>
 <script>
+  $('#reservationdate').datetimepicker({
+        format: 'L'
+    });
+    
   $('#daterange-btn').daterangepicker(
 
 {

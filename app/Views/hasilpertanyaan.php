@@ -11,7 +11,7 @@
             
             <section class="content mx-5">
 
-<div class="card" style="background-color:darkblue; width: 900px;">
+<div class="card mx-5" style="background-color:darkblue; width: 900px;">
   <div class="card-body home-card-body">
     <div class="row">
     <div class="card-body">
@@ -22,7 +22,7 @@
 </div>
 
 
-                <div class="card" style="background-color:lightsteelblue; width: 900px;">
+                <div class="card mx-5" style="background-color:lightsteelblue; width: 900px;">
                     <div class="card-body home-card-body">
                         <div class="row">
 
@@ -34,7 +34,7 @@
                                 
                                 <?php foreach($pertanyaan as $val) : ?>                      
                                   <div class="choices-container-form">
-                                          <div class="info-box bg-light">
+                                          <div class="info-box bg-light mx-5">
                                               <span class="info-box-content">
                                           <div class="form-group">
                                             <label><?= $val['pertanyaan'] ?></label>

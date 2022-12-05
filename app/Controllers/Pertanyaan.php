@@ -23,7 +23,7 @@ class Pertanyaan extends BaseController
         $data['survey'] = $this->surveyModel->find($id);
         $data['pertanyaan'] = $this->pertanyaanModel->where("survey_id", $id)->find();
         $data['choice'] = $this->choiceModel->where("pertanyaan_id", $id)->find();
-        // dd($data['pertanyaan','pilihan']);
+        // dd($data['pertanyaan']);
         
         return view('hasilpertanyaan', $data);
 
