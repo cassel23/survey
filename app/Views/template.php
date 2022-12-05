@@ -174,6 +174,9 @@ function (start, end) {
 
 )
 </script>
+    
+<script>
+    //Date range picker
     $('#reservation').daterangepicker()
     //Date range picker with time picker
     $('#reservationtime').daterangepicker({
@@ -183,8 +186,6 @@ function (start, end) {
         format: 'MM/DD/YYYY hh:mm A'
       }
     })
-<script>
-
 </script>
 </body>
 </html>
