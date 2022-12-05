@@ -11,10 +11,10 @@
             
             <section class="content mx-5">
 
-<div class="card mx-5" style="background-color:darkblue; width: 900px;">
+<div class="card mx-5 justify-content-center" style="background-color:darkblue; width: 900px;">
   <div class="card-body home-card-body">
     <div class="row">
-    <div class="card-body">
+    <div class="card-body justify-content-center justify-content-center">
 
     </div>
     </div>
@@ -22,8 +22,8 @@
 </div>
 
 
-                <div class="card mx-5" style="background-color:lightsteelblue; width: 900px;">
-                    <div class="card-body home-card-body">
+                <div class="card mx-5 justify-content-center" style="background-color:lightsteelblue; width: 900px;">
+                    <div class="card-body home-card-body justify-content-center">
                         <div class="row">
 
 
