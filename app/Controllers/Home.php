@@ -38,12 +38,18 @@ class Home extends BaseController
     }
     public function dashboard()
     {
-        $data['survey'] = $this->surveyModel->find();
-        $data['survey_chart'] = $this->surveyModel->select("title, date(respon.waktu) as y, count(respon.pertanyaan_id) as a")
+        $data['survey_chart'] = $this->surveyModel->select("title, date(respon.waktu) as y, count(distinct(respon.responden)) as a")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
         ->groupBy("survey.id")
         ->groupBy("date(respon.waktu)")
+        ->find();
+
+        $data['survey'] = $this->surveyModel
+        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
+        ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
+        ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
+        ->groupBy("survey.id")
         ->find();
 
         return view('dashboard', $data);
