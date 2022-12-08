@@ -78,7 +78,9 @@ class Home extends BaseController
     }
     public function resultsurvey()
     {
-        return view('resultsurvey');
+        $data['survey'] = $this->surveyModel->find();
+        // dd($data['survey']);
+        return view('resultsurvey', $data);
     }
 
     public function publish($id)

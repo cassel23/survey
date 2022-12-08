@@ -9,22 +9,26 @@
     <title>ShuyoSurvey | Result Survey</title>
 </head>
 
-            <label>Nama Survey</label>
-            <select class="form-control select2 col-3" style="width: 100%;">
+<label>Nama Survey</label>
+<select class="form-control select2 col-3" style="width: 100%;">
+  
+            <?php foreach($survey as $val) : ?>
+            <option>
+               <tr>
+                <td><?= $val['title'] ?></td>
+              </tr>
+            </option>
+            <?php endforeach; ?>
             
-            <option>California</option>
-            <option>Delaware</option>
-            <option>Tennessee</option>
-            <option>Texas</option>
-            <option>Washington</option>
+            
+            
+          </select>
           
-            </select>
-            </div>
           
-            <div class="card card-danger mt-3">
+          <div class="card card-danger mt-3">
             <div class="card-header">
-            <h3 class="card-title">Donut Chart</h3>
-            
+              <h3 class="card-title">Question Result</h3>
+              
             </div>
             <div class="card-body">
             <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
@@ -75,5 +79,7 @@
     })
 
     </script>
+            </div>
+  </div>
 
 <?= $this->endSection() ?>
