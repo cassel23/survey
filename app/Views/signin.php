@@ -77,14 +77,6 @@
           <!-- /.col -->
         </div>
       </form>
-      
-        <p>- OR -</p>
-        <div class="ml-4 mr-4">
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google mr-2"></i> 
-          Sign in using Google
-        </a>
-        </div>
 
         <div class="social-auth-links text-center mb-3">
             <p class="mb-0" style="text-align:center;">
