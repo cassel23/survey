@@ -13,7 +13,6 @@ class Pertanyaan extends BaseController
     private $choiceModel;
     private $responModel;
 
-    
     public function __construct() {
         $this->surveyModel = new \App\Models\SurveyModel();
         $this->pertanyaanModel = new \App\Models\PertanyaanModel();
