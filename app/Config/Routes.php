@@ -57,6 +57,7 @@ $routes->post('/publishsurvey/(:num)', 'Home::publishsurvey/$1');
 $routes->post('/archievesurvey/(:num)', 'Home::archievesurvey/$1');
 $routes->post('/deletesurvey/(:num)', 'Home::deletesurvey/$1');
 
+$routes->delete('deletepertanyaan/(:num)', 'Home::deletepertanyaan/$1');
 
 $routes->post('login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');

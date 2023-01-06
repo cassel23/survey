@@ -10,30 +10,56 @@
 </head>
 
 <label>Nama Survey</label>
-<select class="form-control select2 col-3" style="width: 100%;">
+<select class="form-control select2 col-3" style="width: 100%;" id="survey">
   
-            <?php foreach($survey as $val) : ?>
-            <option>
-               <tr>
-                <td><?= $val['title'] ?></td>
-              </tr>
-            </option>
-            <?php endforeach; ?>
-            
-            
-            
-          </select>
-          
-          
-          <div class="card card-danger mt-3">
-            <div class="card-header">
-              <h3 class="card-title">Question Result</h3>
-              
+<?php foreach($survey as $val) : ?>
+  <option value="<?= $val['id'] ?>" <?= isset($_GET['id']) && $_GET['id'] == $val['id'] ? 'selected' : '' ?>>
+    <tr>
+      <td><?= $val['title'] ?></td>
+    </tr>
+  </option>
+  <?php endforeach; ?>
+  
+  
+</select>
+
+
+<div class="card card-danger mt-3">
+  <div class="card-header">
+    <h3 class="card-title">Question Result</h3>
+  </div>
+
+  
+  <?php if (isset($pertanyaan)) : ?>
+    <div class="card-body">
+       <div class="info-box bg-light">
+         <span class="info-box-content">
+           <div class="form-group">
+              <ol>
+                <?php foreach ($pertanyaan as $val) : ?>
+                  <li>
+                    <?= $val['pertanyaan'] ?>
+                    <ul>
+                      <?php foreach ($respon as $res) : 
+                        if($res['pertanyaan_id'] == $val['id']) : ?>
+                        <li><?= $res['jawaban'] ?></li>
+                        <?php endif;endforeach; ?>
+                      </ul>
+                    </li>
+                    <?php endforeach; ?>
+                    
+                  </ol>
+                </div>
+                </span>
+                </div>
+              </div>
+
+              <?php endif; ?>
+
             </div>
-            <div class="card-body">
-            <canvas id="donutChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-            </div>
-          
+            
+
+
             <script src="../../plugins/jquery/jquery.min.js"></script>
 
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -77,9 +103,18 @@
       data: donutData,
       options: donutOptions
     })
-
     </script>
             </div>
   </div>
+
+
+<?= $this->endSection() ?>
+
+<?= $this->section("js") ?>
+<script>
+  $("#survey").change(function(){
+      window.location.href = '/resultsurvey?id=' + $(this).val()
+    });
+</script>
 
 <?= $this->endSection() ?>

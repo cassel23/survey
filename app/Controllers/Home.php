@@ -4,17 +4,20 @@ namespace App\Controllers;
 
 use App\Models\ChoiceModel;
 use App\Models\PertanyaanModel;
+use App\Models\ResponModel;
 
 class Home extends BaseController
 {
     private $surveyModel;
     private $pertanyaanModel;
     private $choiceModel;
+    private $responModel;
 
     public function __construct() {
         $this->surveyModel = new \App\Models\SurveyModel();
         $this->pertanyaanModel = new PertanyaanModel();
         $this->choiceModel = new ChoiceModel();
+        $this->responModel = new ResponModel();
     }
     
     public function index()
@@ -86,6 +89,15 @@ class Home extends BaseController
     {
         $data['survey'] = $this->surveyModel->find();
         // dd($data['survey']);
+        if (isset($_GET['id'])) {
+            if(!empty($_GET['id'])) {
+                $data['pertanyaan'] = $this->pertanyaanModel->where("survey_id", $_GET['id'])->find();
+                $data['respon'] = $this->responModel->join("pertanyaan", "pertanyaan.id = respon.pertanyaan_id")
+                    ->where("pertanyaan.survey_id", $_GET['id'])
+                    ->orderBy("pertanyaan_id")
+                    ->find();
+            }
+        }
         return view('resultsurvey', $data);
     }
 
@@ -106,6 +118,8 @@ class Home extends BaseController
         $this->surveyModel->set("status", "ARCHIEVED")
                         ->where("id", $id)
                         ->update();
+
+        return redirect()->to("/mysurvey");
 
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
@@ -138,7 +152,7 @@ class Home extends BaseController
                         ->set("published_at", date("Y-m-d H:i:s"))
                         ->where("id", $id)
                         ->update();
-
+                        return redirect()->to("/mysurvey");
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
         ->where("status", "PUBLISHED")
@@ -169,6 +183,7 @@ class Home extends BaseController
         $this->surveyModel->where("id",$id)->delete();
         $this->pertanyaanModel->where("survey_id",$id)->delete();
 
+        return redirect()->to("/mysurvey");
         $data['survey'] = $this->surveyModel
         ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan")
         ->where("status", "PUBLISHED")
@@ -202,7 +217,7 @@ class Home extends BaseController
             'creator'=> null
         ];
         $this->surveyModel->insert($data);
-        // return redirect()->to("/choice/1")->with("success", "Data berhasil disimpan");
+        return redirect()->to("/mysurvey")->with("success", "Data berhasil disimpan");
 
         
         $data['survey'] = $this->surveyModel
@@ -414,4 +429,11 @@ class Home extends BaseController
         return redirect()->to('/choice/' . $pertanyaan['survey_id']);
     }
 
+    public function deletepertanyaan($id)
+    {
+        $pertanyaan = $this->pertanyaanModel->find($id);
+        $this->pertanyaanModel->delete($id);
+
+        return redirect()->to('/choice/' . $pertanyaan['survey_id']);
+    }
 }

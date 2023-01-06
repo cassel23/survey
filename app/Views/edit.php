@@ -192,7 +192,20 @@
                                       <div class="row">
                                           <div class="col-sm-12">
                                             <input type="submit" value="Simpan" class="btn btn-success float-right">
+
+                                            <div class="col-sm-12">
+                                            <form action="/deletepertanyaan/<?= $pertanyaan['id'] ?>" class="d-inline" method="post">
+                                            <input type="hidden" name="_method" value="DELETE">
+                                              <button type="submit" class="btn btn-danger float-left">
+                                            
+                                                  Delete
+                                              </button>
+                                            </form>
+                                            </div>
+                                            
+
                                           </div>
+                                          </form>
                                       </div>
 
                                   </div>
@@ -207,7 +220,7 @@
             </div>
         </div>
 
-            </form>
+            
         </div>
     </div>
 </div>                                
