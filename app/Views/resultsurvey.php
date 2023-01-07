@@ -28,16 +28,17 @@
   <div class="card-header">
     <h3 class="card-title">Question Result</h3>
   </div>
-
   
   <?php if (isset($pertanyaan)) : ?>
-    <div class="card-body">
-       <div class="info-box bg-light">
-         <span class="info-box-content">
+    <div class="card-body bg-light">
            <div class="form-group">
               <ol>
                 <?php foreach ($pertanyaan as $val) : ?>
                   <li>
+                  <div class="choices-container-form">
+                    <div class="info-box">
+                      <span class="info-box-content">
+                        <div class="form-group">
                     <?= $val['pertanyaan'] ?>
                     <ul>
                       <?php foreach ($respon as $res) : 
