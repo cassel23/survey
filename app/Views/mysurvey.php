@@ -162,19 +162,23 @@
                                         <td><?= $val['published_at'] ?></td>
                                         <td><?= $val['count_responses']?></td>
                                         <td>
+                                            <div class ="row"> 
                                             <form action="/publishsurvey/<?= $val['id'] ?>"  class="d-inline" method="post" id="publish_form<?= $val['id'] ?>">
                                                 <a href="javascript:{}" class="btn btn-info btn-sm" onclick="document.getElementById('publish_form<?= $val['id'] ?>').submit(); return false;">
                                                     <i class="ml-1 fas fa-cloud-upload-alt"> </i>
                                                     Publish
                                                 </a>
-                                                <form action="/deletesurvey/<?= $val['id'] ?>" method="post">
-                                                    <button class="btn btn-danger btn-sm d-inline">
-                                                        <i class="fas fa-trash">
-                                                            </i>
-                                                            Delete
-                                                        </button>
-                                                    </form>
                                             </form>
+                                            
+                                            <form action="/deletesurvey/<?= $val['id'] ?>" method="post">
+                                                <button class="btn btn-danger btn-sm d-inline">
+                                                    <i class="fas fa-trash">
+                                                        </i>
+                                                        Delete
+                                                    </button>
+                                                </form>
+                                            
+                                            </div>
                                         </td>  
                                         </tr>
                                     <?php endforeach; ?>
