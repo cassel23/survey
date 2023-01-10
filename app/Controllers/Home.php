@@ -60,7 +60,7 @@ class Home extends BaseController
     public function mysurvey()
     {
         $data['survey'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
+        ->select("survey.*, (select count(pertanyaan.survey_id) from pertanyaan where pertanyaan.survey_id = survey.id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "PUBLISHED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
@@ -68,7 +68,7 @@ class Home extends BaseController
         ->find();
 
         $data['surveydraft'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
+        ->select("survey.*, (select count(pertanyaan.survey_id) from pertanyaan where pertanyaan.survey_id = survey.id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "DRAFT")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
@@ -76,7 +76,7 @@ class Home extends BaseController
         ->find();
 
         $data['surveyarc'] = $this->surveyModel
-        ->select("survey.*, count(pertanyaan.survey_id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
+        ->select("survey.*, (select count(pertanyaan.survey_id) from pertanyaan where pertanyaan.survey_id = survey.id) as jumlah_pertanyaan, count(distinct(respon.responden)) as count_responses")
         ->where("status", "ARCHIEVED")
         ->join("pertanyaan", "survey.id = pertanyaan.survey_id", "left")
         ->join("respon","respon.pertanyaan_id = pertanyaan.id", "left")
